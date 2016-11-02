@@ -10,14 +10,20 @@ Copy the contents of the mod's GameData directory into your KSP's GameData folde
 
 ---REVISION HISTORY---
 
+1.1
+- Added the Cyclone engine, generously provided by blackheart612 from the outstanding Airplane Plus pack. If you haven't seen it, go check it out! The Cyclone is distributed under the CC-BY-NC-SA 3.0 license.
+
 1.0 Initial Release
 
 ---ACKNOWLEDGEMENTS
 
 Module Manager by Sarbian
+Cyclone engine by blackheart612 and is distributed under the CC-BY-NC-SA 3.0 license.
+Firespitter by Snjo.
 
 ---LICENSE---
-Art Assets, including .mu, .mbm, and .dds files are copyright 2014-2016 by Michael Billard, All Rights Reserved.
+Art Assets, including .mu, .mbm, and .dds files but excluding the Cyclone engine are copyright 2014-2016 by Michael Billard, All Rights Reserved.
+Cyclone by blackheart612 is distributed under the CC-BY-NC-SA 3.0 license.
 
 Wild Blue Industries is trademarked by Michael Billard. All Rights Reserved.
 Note that Wild Blue Industries is a ficticious entity 
