@@ -10,6 +10,10 @@ Copy the contents of the mod's GameData directory into your KSP's GameData folde
 
 ---REVISION HISTORY---
 
+1.1.5
+- Removed ModuleManager dependency
+- Moved name tag decals on the HL-10L and -10M to the lower part of the hull.
+
 1.1
 - Added the Cyclone engine, generously provided by blackheart612 from the outstanding Airplane Plus pack. If you haven't seen it, go check it out! The Cyclone is distributed under the CC-BY-NC-SA 3.0 license.
 

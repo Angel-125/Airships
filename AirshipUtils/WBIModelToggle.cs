@@ -26,10 +26,22 @@ namespace WildBlueIndustries
         [KSPField(isPersistant = true)]
         public bool isVisible = true;
 
-        [KSPEvent(guiActiveEditor = true, guiName = "Toggle Endcap")]
-        public void ToggleNameTag()
+        [KSPField]
+        public string meshVisibleName = "Show Endcap";
+
+        [KSPField]
+        public string meshHiddenName = "Hide Endcap";
+
+        [KSPEvent(guiActiveEditor = true)]
+        public void ToggleModel()
         {
             isVisible = !isVisible;
+
+            showHideModel(isVisible);
+        }
+
+        protected void showHideModel(bool visible)
+        {
             string[] tagTransforms = meshTransforms.Split(';');
             Transform[] targets;
 
@@ -48,9 +60,26 @@ namespace WildBlueIndustries
                     target.gameObject.SetActive(isVisible);
                     Collider collider = target.gameObject.GetComponent<Collider>();
                     if (collider != null)
-                        collider.enabled = isVisible;
+                        collider.enabled = visible;
                 }
             }
+
+            if (visible)
+                Events["ToggleModel"].guiName = meshHiddenName;
+            else
+                Events["ToggleModel"].guiName = meshVisibleName;
+        }
+
+        public override void OnLoad(ConfigNode node)
+        {
+            base.OnLoad(node);
+            showHideModel(false);
+        }
+
+        public override void OnStart(StartState state)
+        {
+            base.OnStart(state);
+            showHideModel(isVisible);
         }
     }
 }
