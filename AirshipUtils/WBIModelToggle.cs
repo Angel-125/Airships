@@ -23,6 +23,9 @@ namespace WildBlueIndustries
         [KSPField()]
         public string meshTransforms = string.Empty;
 
+        [KSPField()]
+        public string autoShowWithNode = string.Empty;
+
         [KSPField(isPersistant = true)]
         public bool isVisible = true;
 
@@ -81,5 +84,35 @@ namespace WildBlueIndustries
             base.OnStart(state);
             showHideModel(isVisible);
         }
+
+        public override void OnUpdate()
+        {
+            base.OnUpdate();
+            if (HighLogic.LoadedSceneIsEditor)
+                checkAttachmentNode();
+        }
+
+        protected void checkAttachmentNode()
+        {
+            Debug.Log("checkAttachmentNode called");
+            if (this.part.attachNodes == null)
+            {
+                Debug.Log("No attach nodes");
+                return;
+            }
+
+            AttachNode[] nodes = this.part.attachNodes.ToArray();
+            for (int index = 0; index < nodes.Length; index++)
+            {
+                Debug.Log("Checking node: " + nodes[index].id);
+                if (nodes[index].id == autoShowWithNode && nodes[index].attachedPart != null)
+                {
+                    isVisible = true;
+                    showHideModel(isVisible);
+                    return;
+                }
+            }
+        }
+
     }
 }

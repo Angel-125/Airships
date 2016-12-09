@@ -24,7 +24,7 @@ namespace WildBlueIndustries
         public string nameTagURL = string.Empty;
 
         [KSPField(isPersistant = true)]
-        public bool isVisible = true;
+        public bool isVisible;
 
         [KSPField()]
         public string nameTagTransforms = string.Empty;
