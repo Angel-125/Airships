@@ -32,6 +32,7 @@ namespace WildBlueIndustries
         LineRenderer lineRenderer;
         GameObject cable;
         Transform startTransform, endTransform;
+        Color cableColor;
 
         public void Destroy()
         {
@@ -73,16 +74,18 @@ namespace WildBlueIndustries
             }
             
             //Setup the cable renderer
+            cableColor = rgbToColor(50f, 50f, 50f);
             cable = new GameObject();
             cable.name = "Cable";
             lineRenderer = cable.AddComponent<LineRenderer>();
             lineRenderer.useWorldSpace = false;
+            lineRenderer.material = mat;
+//            lineRenderer.SetColors(rgbToColor(50f, 50f, 50f), rgbToColor(50f, 50f, 50f));
+            lineRenderer.SetColors(cableColor, cableColor);
+            lineRenderer.SetWidth(cableWidth, cableWidth);
             lineRenderer.SetVertexCount(2);
             lineRenderer.SetPosition(0, Vector3.zero);
             lineRenderer.SetPosition(1, Vector3.zero);
-            lineRenderer.SetWidth(cableWidth, cableWidth);
-            lineRenderer.SetColors(new Color(50f, 50f, 50f), new Color(50f, 50f, 50f));
-            lineRenderer.material = mat;
         }
 
         public override void OnUpdate()
@@ -96,6 +99,11 @@ namespace WildBlueIndustries
 
             lineRenderer.SetPosition(0, startTransform.position);
             lineRenderer.SetPosition(1, endTransform.position);
+        }
+
+        protected Color rgbToColor(float red, float green, float blue)
+        {
+            return new Color(red / 255, green / 255, blue / 255);
         }
     }
 

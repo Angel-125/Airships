@@ -57,10 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WBICableDrawer.cs" />
     <Compile Include="WBIElevator.cs" />
-    <Compile Include="WBIGasStation.cs" />
-    <Compile Include="WBIModelToggle.cs" />
     <Compile Include="WBIModuleStaticLift.cs" />
-    <Compile Include="WBINameTag.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\WildBlueTools\WildBlueTools.csproj">
