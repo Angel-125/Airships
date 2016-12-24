@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.0.4
+- Annnd fixed the issue with the cyclone engines...
+
 2.0.3
 - Renamed the Airships folder to the Heisenberg folder to avoid installation conflicts with Hooligan Labs
 IMPORTANT NOTE: You'll need to re-install Hooligan Labs and Heisenberg, sorry about that..
