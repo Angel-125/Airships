@@ -19,6 +19,16 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.1.0
+
+New Parts
+- Bison Adapter: This comes in two sizes: a 2.5m and 3.75m.
+- Storage Gondola: You now have a 2u and a 1u storage gondola.
+
+Bug Fixes & Enhancements
+- All configs in the Spaces folder have been moved to their appropriate folder under Parts. Now it's even easier to remove what you don't use.
+- IVAs are showing properly again.
+
 2.0.4
 - Annnd fixed the issue with the cyclone engines...
 
