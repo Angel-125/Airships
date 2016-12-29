@@ -19,6 +19,15 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.1.5
+- Added Bison to Buffalo adapters. There are two types.
+- Removed velocity modifying code from the ground stabilizer. Be warned, your vessels might slip on slopes.
+- Moved Flight Deck Extensions to Advanced Aerodynamics.
+- The Gyro Ring now correctly takes in Atmosphere and creates CompressedAir.
+- Fixed issues with KerbNet in the command pods.
+- Simplified the production chain for TAC-LS to use Waste in place of Fertilizer.
+- Added a Compost Lab configuration to GondoLab to make Fertilizer when Snacks is installed.
+
 2.1.0
 
 New Parts
