@@ -19,6 +19,12 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.1.6
+- Updated crash tolerances for the Flight Deck System (FDS) parts.
+- FDS Type 1 and Type 2 extension parts now have symmetry enabled.
+- The GondoLab's Geology Lab can participate in Pathfinder's Gold Strike mini-game.
+- The GondoDrill can convert Gold Strike resource lode resources from Ore.
+
 2.1.5
 - Added Bison to Buffalo adapters. There are two types.
 - Removed velocity modifying code from the ground stabilizer. Be warned, your vessels might slip on slopes.
