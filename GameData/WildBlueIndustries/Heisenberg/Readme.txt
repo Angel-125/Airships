@@ -19,6 +19,26 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.2
+New Parts
+- HL-10 Side Elevator: This huge 10m by 10m elevator unfolds from the side of the airship. You can then raise and lower the elevator to the hangar deck.
+- Windowed Walkway: Courtesy of Enceos, this part is a crew corridor that can hold up to 3 kerbals. It currently has no IVA, but one might be included in a future release.
+
+Wide Width
+The Flight Deck System parts (Flight Deck, Flight Deck Fairing, Aircraft Elevator, Side Elevator) now have the ability to toggle their meshes between Standard Width and Wide Width. Wide width changes the models so that their sides are perpendicular to the hangar deck, giving you the full 10-meter width to store your vehicles. In Wide width mode, there's just enough room to store a stock Aeris 3A in the hangar.
+
+Sample Craft
+Found in the Heisenberg/SampleCraft folder are 3 sample airships and one support plane:
+- Heisenberg (SPH): made entirely from the parts pack and stock parts, she has two first-class cabins, two passenger cabins, and can carry cargo as well.
+- Macon (SPH): a modified Heisenberg-class airship, the Macon has been turned into a flying aircraft carrier. Macon has a wider hangar deck than her sister ship, the Akron.
+- Skydancer (VAB): This airship is equipped with rocket booster to achieve orbit. She has an array of science equipment on her back, two hab modules, two science labs, a pair of greenhouses, and a power pack of Nerve engines. Just launch Skydancer into orbit, refuel her, and fly the airship to Laythe.
+- Aeris 3V (SPH): This is a highly modified Aeris 3A that's equipped with VTOL engines and an underbelly docking port. It's a nice complement to the Macon.
+
+Bug Fixes
+- Fixed sound effects issue with the cargo lift.
+- You can now select the default image for the Plasma Screen in addition to screens in the Screenshots folder.
+- Moved the kPad and plasma screens to the Utility tab.
+
 2.1.6
 - Updated crash tolerances for the Flight Deck System (FDS) parts.
 - FDS Type 1 and Type 2 extension parts now have symmetry enabled.

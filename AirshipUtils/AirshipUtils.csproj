@@ -58,6 +58,7 @@
     <Compile Include="WBICableDrawer.cs" />
     <Compile Include="WBIElevator.cs" />
     <Compile Include="WBIModuleStaticLift.cs" />
+    <Compile Include="WBISideElevator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\WildBlueTools\WildBlueTools.csproj">

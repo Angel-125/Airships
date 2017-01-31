@@ -47,7 +47,7 @@ namespace WildBlueIndustries
         [KSPField()]
         public float maxElevatorSpeed = 2.0f;
 
-        [KSPField(guiActive = true, guiName = "Distance (m)", guiFormat = "f2", isPersistant = true)]
+        [KSPField(guiActive = true, guiName = "Distance (m)", guiFormat = "f2")]
         public float travelDistance = 0.0f;
 
         [KSPField(guiName = "Speed: (m/sec)", guiActive = true, guiActiveEditor = true, guiFormat = "f2")]
@@ -372,7 +372,10 @@ namespace WildBlueIndustries
 
                     //If we've are back to our original position then we're done.
                     if (travelDistance < 0.001f)
+                    {
                         setNextState();
+                        travelDistance = 0f;
+                    }
 
                     break;
 
