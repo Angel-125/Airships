@@ -19,6 +19,12 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.2.3
+- The HL-10 Command Gondola, Bison Command Cab, and Bison Airlock Module now all have an ASET-version of their cockpits. Download ASET Props 1.4 from: https://spacedock.info/mod/1204/ASET%20Props
+- The HL-10 Large, Medium, and Small airship hulls can now hold a variety of different resources including LiquidFuel, ElectricCharge, and more. This only applies to new vessel construction; older vessels in-flight are unaffected.
+- Minor bug fixes.
+- WBT update
+
 2.2
 New Parts
 - HL-10 Side Elevator: This huge 10m by 10m elevator unfolds from the side of the airship. You can then raise and lower the elevator to the hangar deck.
@@ -31,7 +37,7 @@ Sample Craft
 Found in the Heisenberg/SampleCraft folder are 3 sample airships and one support plane:
 - Heisenberg (SPH): made entirely from the parts pack and stock parts, she has two first-class cabins, two passenger cabins, and can carry cargo as well.
 - Macon (SPH): a modified Heisenberg-class airship, the Macon has been turned into a flying aircraft carrier. Macon has a wider hangar deck than her sister ship, the Akron.
-- Skydancer (VAB): This airship is equipped with rocket booster to achieve orbit. She has an array of science equipment on her back, two hab modules, two science labs, a pair of greenhouses, and a power pack of Nerve engines. Just launch Skydancer into orbit, refuel her, and fly the airship to Laythe.
+- Skydancer (VAB): This airship is equipped with rocket booster to achieve orbit. She has an array of science equipment on her back, two hab modules, to science labs, a pair of greenhouses, and a power pack of Nerve engines. Just launch Skydancer into orbit, refuel her, and fly the airship to Laythe.
 - Aeris 3V (SPH): This is a highly modified Aeris 3A that's equipped with VTOL engines and an underbelly docking port. It's a nice complement to the Macon.
 
 Bug Fixes
