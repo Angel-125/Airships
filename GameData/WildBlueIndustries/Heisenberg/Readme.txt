@@ -19,6 +19,10 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.2.4
+- Fixed duplicated airship hulls issue.
+- Updated the Snacks converters to the latest standards.
+
 2.2.3
 - The HL-10 Command Gondola, Bison Command Cab, and Bison Airlock Module now all have an ASET-version of their cockpits. Download ASET Props 1.4 from: https://spacedock.info/mod/1204/ASET%20Props
 - The HL-10 Large, Medium, and Small airship hulls can now hold a variety of different resources including LiquidFuel, ElectricCharge, and more. This only applies to new vessel construction; older vessels in-flight are unaffected.
