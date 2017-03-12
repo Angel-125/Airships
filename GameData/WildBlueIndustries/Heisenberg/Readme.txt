@@ -19,6 +19,13 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.2.6
+- WBT update
+
+2.2.5
+- WBT update
+- Added new solar panels, available when Large Electrics is unlocked.
+
 2.2.4
 - Fixed duplicated airship hulls issue.
 - Updated the Snacks converters to the latest standards.
