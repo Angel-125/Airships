@@ -9,7 +9,7 @@ Requires Hooligan Labs Airships by JewelShisen
 Copy the contents of the mod's GameData directory into your KSP's GameData folder.
 NOTE: You can find the following sub-folders in the Parts folder:
 
-Engine: The Cyclone engine
+Engine: Engines used by airships.
 FlightDeckSystem: The flight deck parts
 Gondola: The Bison Gondola System
 Structural: A custom version of the stock hollow tube.
@@ -18,6 +18,24 @@ Wheel: A custom version of the stock TR-2L.
 If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
+
+2.3.0
+New Parts
+- WB-12 "Tornado": This 50kn ducted fan runs on 50 ElectricCharge per second- conveniently the same amount produced by the big solar panel... It can tilt up and down to aid in airship operations.
+
+- S.A.F.E.R. : The Safe Affordable Fission Engine with Radiators generates ElectricCharge for your spacecraft needs. It is based upon the real-world SAFE - 400 reactor created by NASA.
+
+- GondOffice: This alternate habitat module serves as a briefing room for your vessels- or as a transportable office space for the executive on the go. It can be disassembled into a storage box and transported by a kerbal (NOTE: there is a KIS bug where it requires several kerbals to pull an item out of storage). Once assembled, you can give it straight sidings to make it more building-like, and you can connect offices together to make a large building. If this works out, I'll modify the other bison modules (hab, lab, & greenhouse) with similar functionality.
+HINT: Click the top of the conference phone to turn on/off the lights.
+
+- GondoStairs: These external stairs give you access to the upper floors of your buildings. Just unpack them and attach them to the end of a Bison module.
+
+Sample Craft
+- Added the KV-8 Kestrel, a nuclear-powered tilt-fan aircraft. BE SURE TO WARM UP THE REACTOR BEFORE TAKING OFF!
+
+Bug Fixes & Enhancements
+- Added name tag to the HL-10 rudder; it is in the same place as the mission flag, and upside down relative to the mission flag.
+- Updated TAC-LS greenhouse configuration for continual food production.
 
 2.2.6
 - WBT update
@@ -158,11 +176,9 @@ Bug Fixes & Enhancements
 
 Module Manager by Sarbian
 Cyclone engine by blackheart612 and is distributed under the CC-BY-NC-SA 3.0 license.
-Firespitter by Snjo.
 
 ---LICENSE---
-Art Assets, including .mu, .mbm, and .dds files but excluding the Cyclone engine are copyright 2014-2016 by Michael Billard, All Rights Reserved.
-Cyclone by blackheart612 is distributed under the CC-BY-NC-SA 3.0 license.
+Art Assets, including .mu, .mbm, and .dds files are copyright 2014-2016 by Michael Billard, All Rights Reserved.
 
 Wild Blue Industries is trademarked by Michael Billard. All Rights Reserved.
 Note that Wild Blue Industries is a ficticious entity 
