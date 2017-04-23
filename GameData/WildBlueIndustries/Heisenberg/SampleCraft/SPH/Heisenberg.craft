@@ -2,7 +2,7 @@ ship = Heisenberg
 version = 1.2.2
 description = The Heisenberg has first-class and coach-class cabins to ferry your kerbals, and can carry cargo. Action groups:¨1. Toggle Engines¨2. Toggle Engine thrust¨3. Toggle generators & compressors¨4. Open/Close cargo doors
 type = SPH
-size = 16.9093761,20.1902218,80.0011368
+size = 16.9093857,20.1902351,80.0014114
 PART
 {
 	part = WBI.HL10CommandCab_4294159462
@@ -27,9 +27,9 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	link = WBI.GondoHab_4294067450
 	link = hl10GyroRing_4294140866
-	attN = back,WBI.GondoHab_4294067450
+	link = WBI.GondoHab2_4293489060
+	attN = back,WBI.GondoHab2_4293489060
 	attN = top,hl10GyroRing_4294140866
 	EVENTS
 	{
@@ -39,6 +39,22 @@ PART
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = WBINodeStripper
+		isEnabled = True
+		stripUnusedNodes = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 	MODULE
 	{
@@ -66,7 +82,6 @@ PART
 		selectedObject = 0
 		stagingEnabled = True
 		selectedObject = 0
-		showGui = False
 		EVENTS
 		{
 		}
@@ -305,6 +320,542 @@ PART
 	}
 	MODULE
 	{
+		name = ExWorkshop
+		isEnabled = True
+		stagingEnabled = True
+		lastUpdateString = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = TrajectoriesVesselSettings
+		isEnabled = True
+		EntryAngle = 0
+		EntryHorizon = False
+		HighAngle = 0
+		HighHorizon = False
+		LowAngle = 0
+		LowHorizon = False
+		GroundAngle = 0
+		GroundHorizon = False
+		ProgradeEntry = False
+		RetrogradeEntry = False
+		hasTarget = False
+		targetLocation = (0, 0, 0)
+		targetReferenceBody = 
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = MechJebCore
+		isEnabled = True
+		running = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			OnOrbitProgradeAction
+			{
+				actionGroup = None
+			}
+			OnOrbitRetrogradeAction
+			{
+				actionGroup = None
+			}
+			OnOrbitNormalAction
+			{
+				actionGroup = None
+			}
+			OnOrbitAntinormalAction
+			{
+				actionGroup = None
+			}
+			OnOrbitRadialInAction
+			{
+				actionGroup = None
+			}
+			OnOrbitRadialOutAction
+			{
+				actionGroup = None
+			}
+			OnKillRotationAction
+			{
+				actionGroup = None
+			}
+			OnDeactivateSmartASSAction
+			{
+				actionGroup = None
+			}
+			OnPanicAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronOffAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronKeepVertAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronZeroSpeedAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronPlusOneSpeedAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronMinusOneSpeedAction
+			{
+				actionGroup = None
+			}
+			OnTranslatronToggleHSAction
+			{
+				actionGroup = None
+			}
+		}
+		MechJebLocalSettings
+		{
+			MechJebModuleMenu
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAscentAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAscentGuidance
+			{
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleAscentNavBall
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAscentPathEditor
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAttitudeAdjustment
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleCustomWindowEditor
+			{
+				unlockParts = 
+				unlockTechs = flightControl
+			}
+			MechJebModuleDebugArrows
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleDockingAutopilot
+			{
+				forceRol = False
+				overrideSafeDistance = False
+				overrideTargetSize = False
+				unlockParts = 
+				unlockTechs = 
+				rol
+				{
+					_val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleDockingGuidance
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleInfoItems
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleLandingAutopilot
+			{
+				deployGears = True
+				deployChutes = True
+				rcsAdjustment = True
+				unlockParts = 
+				unlockTechs = 
+				touchdownSpeed
+				{
+					_val = 0.5
+					_text = 0.5
+				}
+				limitGearsStage
+				{
+					val = 0
+					_text = 0
+				}
+				limitChutesStage
+				{
+					val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleLandingGuidance
+			{
+				landingSiteIdx = 0
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleLandingPredictions
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleManeuverPlanner
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleNodeEditor
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleNodeExecutor
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRCSBalancerWindow
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleRendezvousAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleRendezvousAutopilotWindow
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleRendezvousGuidance
+			{
+				unlockParts = 
+				unlockTechs = advUnmanned
+			}
+			MechJebModuleRoverController
+			{
+				ControlHeading = False
+				ControlSpeed = False
+				BrakeOnEject = False
+				BrakeOnEnergyDepletion = False
+				WarpToDaylight = True
+				StabilityControl = False
+				LimitAcceleration = False
+				unlockParts = 
+				unlockTechs = 
+				heading
+				{
+					_val = 0
+					_text = 0
+				}
+				speed
+				{
+					_val = 10
+					_text = 10
+				}
+			}
+			MechJebModuleRoverWindow
+			{
+				unlockParts = 
+				unlockTechs = fieldScience
+			}
+			MechJebModuleScript
+			{
+				minifiedGUI = False
+				selectedSlot = 0
+				activeSavepoint = -1
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleSettings
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleSmartASS
+			{
+				mode = ORBITAL
+				target = OFF
+				advReference = INERTIAL
+				advDirection = FORWARD
+				forceRol = False
+				forcePitch = True
+				forceYaw = True
+				unlockParts = 
+				unlockTechs = flightControl
+				srfHdg
+				{
+					_val = 90
+					_text = 90
+				}
+				srfPit
+				{
+					_val = 90
+					_text = 90
+				}
+				srfRol
+				{
+					_val = 0
+					_text = 0
+				}
+				srfVelYaw
+				{
+					_val = 0
+					_text = 0
+				}
+				srfVelPit
+				{
+					_val = 0
+					_text = 0
+				}
+				srfVelRol
+				{
+					_val = 0
+					_text = 0
+				}
+				rol
+				{
+					_val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleSmartRcs
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleSpaceplaneAutopilot
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleSpaceplaneGuidance
+			{
+				runwayIndex = 0
+				unlockParts = 
+				unlockTechs = unmannedTech
+			}
+			MechJebModuleStageStats
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleTargetController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleThrustWindow
+			{
+				autostageSavedState = False
+				unlockParts = 
+				unlockTechs = advFlightControl
+			}
+			MechJebModuleTranslatron
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+				trans_spd
+				{
+					_val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleWarpHelper
+			{
+				unlockParts = 
+				unlockTechs = advFlightControl
+				phaseAngle
+				{
+					_val = 0
+					_text = 0
+				}
+			}
+			MechJebModuleWaypointWindow
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleWaypointHelpWindow
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			ModExtensionDemo
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleCustomInfoWindow
+			{
+			}
+			MechJebModuleWarpController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleSolarPanelController
+			{
+				prev_ShouldOpenSolarPanels = False
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleThrustController
+			{
+				limitThrottle = False
+				limiterMinThrottle = False
+				electricThrottle = False
+				unlockParts = 
+				unlockTechs = 
+				maxThrottle
+				{
+					_val = 1
+					_text = 100
+				}
+				minThrottle
+				{
+					_val = 0.050000000000000003
+					_text = 5
+				}
+				electricThrottleLo
+				{
+					_val = 0.050000000000000003
+					_text = 5
+				}
+				electricThrottleHi
+				{
+					_val = 0.14999999999999999
+					_text = 15
+				}
+			}
+			MechJebModuleRCSController
+			{
+				unlockParts = 
+				unlockTechs = 
+				Tf
+				{
+					_val = 1
+					_text = 1
+				}
+				Kp
+				{
+					_val = 0.125
+					_text = 0.125
+				}
+				Ki
+				{
+					_val = 0.070000000000000007
+					_text = 0.07
+				}
+				Kd
+				{
+					_val = 0.53000000000000003
+					_text = 0.53
+				}
+			}
+			MechJebModuleRCSBalancer
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleAttitudeController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleStagingController
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleFlightRecorder
+			{
+				markUT = 0
+				deltaVExpended = 0
+				dragLosses = 0
+				gravityLosses = 0
+				steeringLosses = 0
+				markLAN = 0
+				markLatitude = 0
+				markLongitude = 0
+				markAltitude = 0
+				markBodyIndex = 1
+				maxDragGees = 0
+				unlockParts = 
+				unlockTechs = 
+			}
+			MechJebModuleFlightRecorderGraph
+			{
+				unlockParts = 
+				unlockTechs = 
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleTripLogger
 		isEnabled = True
 		stagingEnabled = True
@@ -428,7 +979,7 @@ PART
 {
 	part = hl10GyroRing_4294140866
 	partName = Part
-	pos = 4.55321503,13.1191559,25.7598076
+	pos = 4.55321503,13.1191626,25.7598076
 	attPos = 0,0,0
 	attPos0 = 0,-4.76837158E-07,-5.98200083
 	rot = -0.707106829,0,0,-0.707106829
@@ -579,6 +1130,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = Atmosphere
@@ -617,7 +1183,7 @@ PART
 {
 	part = hl10NoseCone_4294075178
 	partName = Part
-	pos = 4.55321503,13.119175,32.6348572
+	pos = 4.55321503,13.1191854,32.6348686
 	attPos = 0,0,0
 	attPos0 = 0,6.87499905,-1.90734818E-06
 	rot = -0.707106829,0,0,-0.707106829
@@ -646,6 +1212,27 @@ PART
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = True
+		showMeshesName = Show End Cap
+		hideMeshesName = Hide End Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 	MODULE
 	{
@@ -713,12 +1300,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = hl10Medium_4294075104
 	partName = Part
-	pos = 4.55321503,13.1191502,22.6347847
+	pos = 4.55321503,13.1191568,22.634779
 	attPos = 0,0,0
 	attPos0 = 0,-3.12499976,-4.76837045E-07
 	rot = -0.707106829,0,0,-0.707106829
@@ -855,6 +1457,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -871,7 +1488,7 @@ PART
 {
 	part = hl10HangarDeck_4294074922
 	partName = Part
-	pos = 4.55321503,13.1191578,15.1347198
+	pos = 4.55321503,13.1191673,15.1346951
 	attPos = 0,0,0
 	attPos0 = 0,-7.50000095,-4.76837045E-07
 	rot = -0.707106829,0,0,-0.707106829
@@ -923,7 +1540,7 @@ PART
 		{
 			ToggleAction
 			{
-				actionGroup = None
+				actionGroup = Custom04
 			}
 		}
 		UPGRADESAPPLIED
@@ -1030,6 +1647,21 @@ PART
 	}
 	MODULE
 	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleKISInventory
 		isEnabled = True
 		invName = 
@@ -1121,519 +1753,9 @@ PART
 }
 PART
 {
-	part = WBI.GondoHab_4294067450
-	partName = Part
-	pos = 4.55321503,7.13712978,24.0708084
-	attPos = 0,0,0
-	attPos0 = 0,-1.68900013,2.38418579E-07
-	rot = -0.707106829,0,0,-0.707106829
-	attRot = 0,0,0,1
-	attRot0 = 0,0,0,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	modCost = 425
-	modMass = 1.375
-	modSize = 0,0,0
-	link = strutConnector_4294073546
-	link = WBI.GondoHab_4294065980
-	attN = front,WBI.HL10CommandCab_4294159462
-	attN = back,WBI.GondoHab_4294065980
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = True
-		showMeshesName = Show Gondola Mount
-		hideMeshesName = Hide Gondola Mount
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleScienceContainer
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			CollectAllAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBILight
-		isEnabled = True
-		ecRequired = 0.040000000000000001
-		red = 1
-		green = 1
-		blue = 1
-		level = 1
-		guiIsVisible = True
-		stagingEnabled = True
-		isDeployed = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleLightsAction
-			{
-				actionGroup = Light
-			}
-			ToggleAnimationAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = FlagDecal
-		isEnabled = True
-		flagDisplayed = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleDeployableSolarPanel
-		isEnabled = True
-		efficiencyMult = 1
-		launchUT = -1
-		currentRotation = (1, 1.62920671E-07, 1.62920699E-07, 8.94069956E-08)
-		storedAnimationTime = 0
-		storedAnimationSpeed = 0
-		deployState = EXTENDED
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ExtendPanelsAction
-			{
-				actionGroup = None
-				active = False
-			}
-			ExtendAction
-			{
-				actionGroup = None
-				active = False
-			}
-			RetractAction
-			{
-				actionGroup = None
-				active = False
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIMultipurposeHab
-		isEnabled = True
-		currentVolume = 0
-		templateNodes = GONDOHAB;PATH_HABITATION
-		baseStorage = 800
-		maxStorage = 800
-		decalsVisible = False
-		fillToMaxInEditor = True
-		capacityFactor = 0.25
-		partMass = 1.375
-		templateName = GondoHab
-		shortName = 
-		isDeployed = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			DumpResourcesAction
-			{
-				actionGroup = None
-			}
-		}
-		RESOURCE
-		{
-			name = Soil
-			amount = 0
-			maxAmount = 50
-			flowState = True
-			isTweakable = True
-			hideFlow = False
-			isVisible = True
-			flowMode = Both
-		}
-		WBIMODULE
-		{
-			name = SoilRecycler
-			isEnabled = True
-			EfficiencyBonus = 1
-			IsActivated = False
-			stagingEnabled = True
-			lastUpdateTime = 0
-			EVENTS
-			{
-			}
-			ACTIONS
-			{
-				StopResourceConverterAction
-				{
-					actionGroup = None
-				}
-				StartResourceConverterAction
-				{
-					actionGroup = None
-				}
-				ToggleResourceConverterAction
-				{
-					actionGroup = None
-				}
-			}
-			UPGRADESAPPLIED
-			{
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIPropStateHelper
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIResourceDistributor
-		isEnabled = True
-		isParticipating = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		DISTRIBUTION
-		{
-			resourceName = ElectricCharge
-			mode = 0
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = SoilRecycler
-		isEnabled = True
-		EfficiencyBonus = 1
-		IsActivated = False
-		stagingEnabled = True
-		lastUpdateTime = 0
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			StopResourceConverterAction
-			{
-				actionGroup = None
-			}
-			StartResourceConverterAction
-			{
-				actionGroup = None
-			}
-			ToggleResourceConverterAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 2000
-		maxAmount = 2000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Snacks
-		amount = 800
-		maxAmount = 800
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Soil
-		amount = 0
-		maxAmount = 50
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = strutConnector_4294073546
-	partName = CompoundPart
-	pos = 4.55321503,7.96158409,22.803772
-	attPos = 0,0,0
-	attPos0 = 7.20749966E-08,-1.2670356,-0.824441969
-	rot = -0.707106829,0,-0.707106829,0
-	attRot = 0,0,0,1
-	attRot0 = 0.5,0.5,0.5,0.5
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	srfN = srfAttach,WBI.GondoHab_4294067450
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-		tgt = 4294065980
-		pos = -3.81469727E-06,1.90734795E-06,0
-		rot = 0,0,0,1.00000024
-		dir = 0,0,0
-	}
-	MODULE
-	{
-		name = CModuleLinkedMesh
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = CModuleStrut
-		isEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
 	part = hl10HangarDeck_4294073484
 	partName = Part
-	pos = 4.55321503,13.1191158,5.13463974
+	pos = 4.55321503,13.1191158,5.13459015
 	attPos = 0,0,0
 	attPos0 = 0.624041557,16.3019447,-20.0653419
 	rot = -0.707106829,0,0,-0.707106829
@@ -1687,7 +1809,7 @@ PART
 		{
 			ToggleAction
 			{
-				actionGroup = None
+				actionGroup = Custom04
 			}
 		}
 		UPGRADESAPPLIED
@@ -1781,6 +1903,21 @@ PART
 		isEnabled = True
 		nameTagURL = 
 		isVisible = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -1887,7 +2024,7 @@ PART
 {
 	part = hl10HangarDeck_4294073222
 	partName = Part
-	pos = 4.55321503,13.1191196,-4.86552048
+	pos = 4.55321503,13.1191254,-4.86561584
 	attPos = 0,0,0
 	attPos0 = 0,-10,-1.90734863E-06
 	rot = -0.707106829,0,0,-0.707106829
@@ -1947,7 +2084,7 @@ PART
 		{
 			ToggleAction
 			{
-				actionGroup = None
+				actionGroup = Custom04
 			}
 		}
 		UPGRADESAPPLIED
@@ -2054,6 +2191,21 @@ PART
 	}
 	MODULE
 	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = ModuleKISInventory
 		isEnabled = True
 		invName = 
@@ -2147,7 +2299,7 @@ PART
 {
 	part = hl10CargoLift_4294072960
 	partName = Part
-	pos = 4.55321503,13.1191006,-12.3655701
+	pos = 4.55321503,13.1191006,-12.3656921
 	attPos = 0,0,0
 	attPos0 = 0,-7.50000858,9.53671815E-07
 	rot = -0.707106829,0,0,-0.707106829
@@ -2208,7 +2360,6 @@ PART
 	{
 		name = WBIElevator
 		isEnabled = True
-		travelDistance = 0
 		elevatorThrottle = 25
 		stagingEnabled = True
 		EVENTS
@@ -2339,12 +2490,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = hl10Medium_4294072586
 	partName = Part
-	pos = 4.55321503,13.1191006,-17.3656387
+	pos = 4.55321503,13.1191006,-17.3657875
 	attPos = 0,0,0
 	attPos0 = 0,-5.00001383,0
 	rot = -0.707106829,0,0,-0.707106829
@@ -2480,6 +2646,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = LiquidFuel
@@ -2496,7 +2677,7 @@ PART
 {
 	part = hl10GyroRing_4294072404
 	partName = Part
-	pos = 4.55321503,13.1190929,-20.4906769
+	pos = 4.55321503,13.1190929,-20.4908295
 	attPos = 0,0,0
 	attPos0 = 0,-3.12501097,0
 	rot = -0.707106829,0,0,-0.707106829
@@ -2648,6 +2829,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = Atmosphere
@@ -2686,7 +2882,7 @@ PART
 {
 	part = hl10TailCone_4294071590
 	partName = Part
-	pos = 4.55321598,13.1190891,-31.1159515
+	pos = 4.55321598,13.1190968,-31.1161804
 	attPos = 0,0,0
 	attPos0 = 0,-10.6250134,3.81470181E-06
 	rot = -0.65328151,-0.270598054,-0.270598114,-0.65328151
@@ -2725,6 +2921,27 @@ PART
 	}
 	PARTDATA
 	{
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = True
+		showMeshesName = Show End Cap
+		hideMeshesName = Hide End Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
 	}
 	MODULE
 	{
@@ -2792,15 +3009,30 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = hl10Rudder_4294071516
 	partName = Part
-	pos = 0.461895466,17.2104473,-31.1159821
+	pos = 0.461895466,17.210474,-31.1162109
 	attPos = 0,0,0
 	attPos0 = -9.5367443E-07,-1.12461266E-05,-5.78599977
-	rot = -0.653281569,0.270597994,0.270597994,-0.653281569
+	rot = -0.653281569,0.270597965,0.270597965,-0.653281569
 	attRot = 0,0,0,1
 	attRot0 = -1.71072827E-08,-0.707106829,-4.1300634E-08,0.707106829
 	mir = 1,1,1
@@ -2868,9 +3100,41 @@ PART
 	}
 	MODULE
 	{
+		name = WBINameTag
+		isEnabled = True
+		nameTagURL = 
+		isVisible = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = FlagDecal
 		isEnabled = True
 		flagDisplayed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2887,7 +3151,7 @@ PART
 {
 	part = hl10Rudder_4294071460
 	partName = Part
-	pos = 0.461907387,9.02771568,-31.1159668
+	pos = 0.461911201,9.02770042,-31.1161995
 	attPos = 0,0,0
 	attPos0 = -5.78599882,-1.09661605E-05,3.57627812E-07
 	rot = -0.65328151,-0.270598024,-0.270598143,-0.65328151
@@ -2958,9 +3222,41 @@ PART
 	}
 	MODULE
 	{
+		name = WBINameTag
+		isEnabled = True
+		nameTagURL = 
+		isVisible = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = FlagDecal
 		isEnabled = True
 		flagDisplayed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -2977,7 +3273,7 @@ PART
 {
 	part = hl10Rudder_4294071404
 	partName = Part
-	pos = 8.64453697,9.02771187,-31.1159744
+	pos = 8.64453697,9.02769661,-31.1162071
 	attPos = 0,0,0
 	attPos0 = 3.57627914E-06,-1.16420579E-05,5.78599691
 	rot = -0.270598054,-0.65328145,-0.653281689,-0.270598054
@@ -3048,9 +3344,41 @@ PART
 	}
 	MODULE
 	{
+		name = WBINameTag
+		isEnabled = True
+		nameTagURL = 
+		isVisible = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = FlagDecal
 		isEnabled = True
 		flagDisplayed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3067,7 +3395,7 @@ PART
 {
 	part = hl10Rudder_4294071348
 	partName = Part
-	pos = 8.64452362,17.2104549,-31.1159821
+	pos = 8.64451981,17.2104816,-31.1162148
 	attPos = 0,0,0
 	attPos0 = 5.78600168,-8.10732581E-06,-3.09944107E-06
 	rot = 0.270598084,-0.653281391,-0.653281629,0.270598084
@@ -3138,9 +3466,41 @@ PART
 	}
 	MODULE
 	{
+		name = WBINameTag
+		isEnabled = True
+		nameTagURL = 
+		isVisible = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
 		name = FlagDecal
 		isEnabled = True
 		flagDisplayed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -3157,10 +3517,10 @@ PART
 {
 	part = GearLarge_4294071292
 	partName = Part
-	pos = 2.13547778,8.93138695,-22.0248451
+	pos = 2.13547945,8.93136406,-22.0249939
 	attPos = 0,0,0
 	attPos0 = -4.67071199,9.09087658,1.2515111
-	rot = 0.0113876462,-0.00657486636,2.10478902E-07,0.999913633
+	rot = 0.0113876462,-0.00657488778,1.89291313E-07,0.999913633
 	attRot = -3.35305899E-08,-2.00687822E-09,0.258819073,0.965925992
 	attRot0 = 0.647564709,0.27795127,0.263197929,-0.65888536
 	mir = 1,1,1
@@ -3435,15 +3795,30 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = GearLarge_4294071002
 	partName = Part
-	pos = 6.97095156,8.93138695,-22.0248528
+	pos = 6.97095013,8.93136406,-22.0250015
 	attPos = 0,0,0
 	attPos0 = -1.25151098,9.09088039,4.67071152
-	rot = 0.0113876462,0.00657467684,-8.4284693E-08,0.999913633
+	rot = 0.0113876462,0.00657465588,-1.05239451E-07,0.999913633
 	attRot = -3.35305899E-08,-2.00687822E-09,0.258819073,0.965925992
 	attRot0 = 0.644006431,0.269361079,0.271788448,-0.662443519
 	mir = 1,1,1
@@ -3718,12 +4093,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = GearLarge_4294070712
 	partName = Part
-	pos = 2.06960106,8.81737709,21.4636459
+	pos = 2.06960106,8.81737328,21.4636402
 	attPos = 0,0,0
 	attPos0 = -2.48361397,-1.17114282,4.30174541
 	rot = -2.35438347E-06,1.3472029E-06,2.87869284E-08,1.00000012
@@ -4001,12 +4391,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = GearLarge_4294070422
 	partName = Part
-	pos = 7.03682899,8.81737709,21.4636459
+	pos = 7.03682899,8.81737328,21.4636402
 	attPos = 0,0,0
 	attPos0 = 2.48361397,-1.17114282,4.30174541
 	rot = -2.35438347E-06,-1.3472029E-06,-2.87869284E-08,1.00000012
@@ -4284,12 +4689,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = GearLarge_4294070132
 	partName = Part
-	pos = 2.06835747,8.8152256,24.8787918
+	pos = 2.06835747,8.81522179,24.8787918
 	attPos = 0,0,0
 	attPos0 = -2.48485756,2.24398828,4.30389977
 	rot = -2.35438347E-06,1.3472029E-06,2.87869284E-08,1.00000012
@@ -4567,12 +4987,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = GearLarge_4294069842
 	partName = Part
-	pos = 7.03807259,8.8152256,24.8787918
+	pos = 7.03807259,8.81522179,24.8787918
 	attPos = 0,0,0
 	attPos0 = 2.48485756,2.2439878,4.30389977
 	rot = -2.35438347E-06,-1.3472029E-06,-2.87869284E-08,1.00000012
@@ -4850,12 +5285,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = hl10RCSModule_4294069552
 	partName = Part
-	pos = -0.43458271,13.1190929,-20.3586655
+	pos = -0.43458271,13.1190929,-20.3588181
 	attPos = 0,0,0
 	attPos0 = -4.98779774,0.132015228,0
 	rot = 0.50000006,0.50000006,0.50000006,0.50000006
@@ -4916,12 +5366,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = hl10RCSModule_4294069434
 	partName = Part
-	pos = 9.54101276,13.1190929,-20.3586655
+	pos = 9.54101276,13.1190929,-20.3588181
 	attPos = 0,0,0
 	attPos0 = 4.98779774,0.132015228,0
 	rot = 0.50000006,-0.50000006,-0.50000006,0.50000006
@@ -4982,12 +5447,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = hl10RCSModule_4294069316
 	partName = Part
-	pos = -0.444403172,13.1190929,-21.0930023
+	pos = -0.444403172,13.1190929,-21.0931549
 	attPos = 0,0,0
 	attPos0 = -4.9976182,-0.602320671,0
 	rot = 0.50000006,0.50000006,0.50000006,0.50000006
@@ -5048,12 +5528,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = hl10RCSModule_4294069198
 	partName = Part
-	pos = 9.55083275,13.1190929,-21.0930023
+	pos = 9.55083275,13.1190929,-21.0931549
 	attPos = 0,0,0
 	attPos0 = 4.99761772,-0.602320671,0
 	rot = 0.50000006,-0.50000006,-0.50000006,0.50000006
@@ -5114,12 +5609,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = hl10RCSModule_4294069080
 	partName = Part
-	pos = -0.387331963,13.1191549,25.7353706
+	pos = -0.387331963,13.1191616,25.7353706
 	attPos = 0,0,0
 	attPos0 = -4.94054699,-0.0244378988,9.53674089E-07
 	rot = 0.500000358,0.500000358,0.499999732,0.499999732
@@ -5180,12 +5690,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = hl10RCSModule_4294068962
 	partName = Part
-	pos = 9.49376202,13.1191549,25.7353706
+	pos = 9.49376202,13.1191616,25.7353706
 	attPos = 0,0,0
 	attPos0 = 4.94054699,-0.0244378988,9.53674089E-07
 	rot = 0.500000417,-0.500000358,-0.499999732,0.499999732
@@ -5246,12 +5771,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = hl10RCSModule_4294068844
 	partName = Part
-	pos = -0.415053844,13.1191483,24.8191776
+	pos = -0.415053844,13.119154,24.8191776
 	attPos = 0,0,0
 	attPos0 = -4.96826887,2.18437672,1.43051147E-06
 	rot = 0.50000006,0.50000006,0.50000006,0.50000006
@@ -5312,12 +5852,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = hl10RCSModule_4294068726
 	partName = Part
-	pos = 9.52148438,13.1191483,24.8191776
+	pos = 9.52148438,13.119154,24.8191776
 	attPos = 0,0,0
 	attPos0 = 4.96826935,2.18437672,1.43051147E-06
 	rot = -0.50000006,0.50000006,0.50000006,-0.50000006
@@ -5378,12 +5933,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = GearLarge_4294068608
 	partName = Part
-	pos = 2.06459045,8.80865288,-8.2989502
+	pos = 2.06459045,8.80864525,-8.29906464
 	attPos = 0,0,0
 	attPos0 = -2.48862457,-3.43340683,4.31042576
 	rot = 2.08616257E-07,-1.57164521E-07,-1.54268207E-08,1.00000012
@@ -5661,12 +6231,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = GearLarge_4294068318
 	partName = Part
-	pos = 7.0418396,8.80865288,-8.2989502
+	pos = 7.0418396,8.80864525,-8.29906464
 	attPos = 0,0,0
 	attPos0 = 2.48862457,-3.43340683,4.31042576
 	rot = 2.08616257E-07,1.57164521E-07,1.54268207E-08,1.00000012
@@ -5944,12 +6529,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = GearLarge_4294068028
 	partName = Part
-	pos = 2.09024334,8.85310555,-4.56911087
+	pos = 2.09024334,8.85310173,-4.56920624
 	attPos = 0,0,0
 	attPos0 = -2.46297169,0.296401978,4.26599407
 	rot = 2.08616257E-07,-1.57164521E-07,-1.54268207E-08,1.00000012
@@ -6227,12 +6827,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = GearLarge_4294067738
 	partName = Part
-	pos = 7.01618671,8.85310555,-4.56911087
+	pos = 7.01618671,8.85310173,-4.56920624
 	attPos = 0,0,0
 	attPos0 = 2.46297169,0.296401978,4.26599407
 	rot = 2.08616257E-07,1.57164521E-07,1.54268207E-08,1.00000012
@@ -6510,12 +7125,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = dockingPort3_4294067448
 	partName = Part
-	pos = 4.55321503,13.1191196,-4.86551666
+	pos = 4.55321503,13.1191254,-4.86561203
 	attPos = 0,0,0
 	attPos0 = 0,3.81469727E-06,1.90734863E-06
 	rot = 0,0,0,1.00000012
@@ -6584,12 +7214,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = dockingPort3_4294067408
 	partName = Part
-	pos = 4.55321503,13.1191559,15.1347218
+	pos = 4.55321503,13.1191654,15.134697
 	attPos = 0,0,0
 	attPos0 = 0,1.90734863E-06,9.53674089E-07
 	rot = 0,0,0,1.00000012
@@ -6658,12 +7303,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4294067368
 	partName = CompoundPart
-	pos = 7.96982288,16.5357304,-18.6381302
+	pos = 7.96982288,16.5357456,-18.6382751
 	attPos = 0,0,0
 	attPos0 = 3.41660786,-1.27249527,-3.41660619
 	rot = -0.270597905,0.653281569,0.653281569,-0.270598084
@@ -6727,12 +7387,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = strutConnector_4294067306
 	partName = CompoundPart
-	pos = 7.97056484,16.5364666,-21.0524445
+	pos = 7.97056484,16.5364819,-21.052597
 	attPos = 0,0,0
 	attPos0 = 3.41734982,-0.561778069,-3.41735005
 	rot = -0.270597905,0.653281569,0.653281569,-0.270598084
@@ -6796,12 +7471,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = trussPiece1x_4294067244
 	partName = Part
-	pos = 10.1124878,13.1191196,-4.86552811
+	pos = 10.1124878,13.1191254,-4.86562347
 	attPos = 0,0,0
 	attPos0 = 5.55927277,-7.62939453E-06,-1.90734318E-06
 	rot = 0,0,0.707106829,-0.707106829
@@ -6832,12 +7522,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = Mk1FuselageStructuralJr_4294067222
 	partName = Part
-	pos = 11.1734581,13.1191196,-4.86554337
+	pos = 11.1734581,13.1191254,-4.86563873
 	attPos = 0.0230560284,-0.0540304184,-0.00618363544
 	attPos0 = -0.02305579,1.11499989,0.00617247587
 	rot = 0.49999997,0.499999821,0.50000006,0.500000417
@@ -6871,15 +7576,30 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = cycloneProp_4294067126
 	partName = Part
-	pos = 11.1734591,13.1191158,-5.33430481
+	pos = 11.173461,13.1191196,-5.33440781
 	attPos = 0,0,0
 	attPos0 = -2.14512994E-08,-0.468753904,2.98023473E-08
-	rot = 0.707106829,2.73954527E-07,1.47513987E-07,-0.707106948
+	rot = 0.707106888,2.73954527E-07,2.31807689E-07,-0.707106888
 	attRot = 0,0,0,1
 	attRot0 = 0.707106829,-2.98023224E-08,-0.707106769,0
 	mir = 1,1,1
@@ -6908,14 +7628,19 @@ PART
 	}
 	MODULE
 	{
-		name = FSengineSounds
+		name = ModuleResourceIntake
 		isEnabled = True
+		intakeEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -6923,13 +7648,13 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
 		EngineIgnited = False
 		engineShutdown = False
-		currentThrottle = 0.999984503
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		stagingEnabled = True
@@ -6980,26 +7705,6 @@ PART
 		}
 		ACTIONS
 		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleResourceIntake
-		isEnabled = True
-		intakeEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -7048,6 +7753,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = IntakeAir
@@ -7075,10 +7795,10 @@ PART
 {
 	part = cycloneProp_4294067032
 	partName = Part
-	pos = 11.1734619,13.1191273,-4.39678192
+	pos = 11.1734619,13.1191311,-4.39687729
 	attPos = 0,0,0
 	attPos0 = 2.14509512E-08,0.468746275,-2.98023473E-08
-	rot = 4.21468513E-08,0.70710659,0.707107067,-1.68587405E-07
+	rot = 1.26440554E-07,0.70710659,0.707107186,4.21468513E-08
 	attRot = 0,0,0.999999881,0
 	attRot0 = -7.45058149E-09,-0.707106829,-8.19563866E-08,0.707106769
 	mir = 1,1,1
@@ -7107,14 +7827,19 @@ PART
 	}
 	MODULE
 	{
-		name = FSengineSounds
+		name = ModuleResourceIntake
 		isEnabled = True
+		intakeEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -7122,13 +7847,13 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
 		EngineIgnited = False
 		engineShutdown = False
-		currentThrottle = 0.999984503
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		stagingEnabled = True
@@ -7186,26 +7911,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleResourceIntake
-		isEnabled = True
-		intakeEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = FSplanePropellerSpinner
 		isEnabled = True
 		stagingEnabled = True
@@ -7247,6 +7952,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = IntakeAir
@@ -7274,7 +7994,7 @@ PART
 {
 	part = trussPiece1x_4294066938
 	partName = Part
-	pos = -1.00605774,13.1191196,-4.86552811
+	pos = -1.00605774,13.1191254,-4.86562347
 	attPos = 0,0,0
 	attPos0 = -5.55927277,-7.62939453E-06,-1.90734318E-06
 	rot = 0.707106829,-0.707106829,0,0
@@ -7305,12 +8025,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = Mk1FuselageStructuralJr_4294066916
 	partName = Part
-	pos = -2.06702805,13.1191196,-4.86551285
+	pos = -2.067029,13.1191254,-4.86560822
 	attPos = 0.0230560284,-0.0540304184,-0.00618363544
 	attPos0 = -0.02305579,1.11499989,0.00617247587
 	rot = 0.500000179,0.500000417,-0.49999994,-0.499999791
@@ -7344,12 +8079,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = cycloneProp_4294066820
 	partName = Part
-	pos = -2.06702805,13.1191158,-4.39675522
+	pos = -2.067029,13.1191196,-4.39685059
 	attPos = 0,0,0
 	attPos0 = -2.14512994E-08,-0.468753904,2.98023473E-08
 	rot = -2.52881108E-07,-0.707106888,-0.707106888,-4.21468513E-07
@@ -7381,14 +8131,19 @@ PART
 	}
 	MODULE
 	{
-		name = FSengineSounds
+		name = ModuleResourceIntake
 		isEnabled = True
+		intakeEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -7396,13 +8151,13 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
 		EngineIgnited = False
 		engineShutdown = False
-		currentThrottle = 0.999984503
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		stagingEnabled = True
@@ -7453,26 +8208,6 @@ PART
 		}
 		ACTIONS
 		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleResourceIntake
-		isEnabled = True
-		intakeEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -7521,6 +8256,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = IntakeAir
@@ -7548,7 +8298,7 @@ PART
 {
 	part = cycloneProp_4294066726
 	partName = Part
-	pos = -2.06703186,13.1191273,-5.33427811
+	pos = -2.06703281,13.1191311,-5.3343811
 	attPos = 0,0,0
 	attPos0 = 2.14509512E-08,0.468746275,-2.98023473E-08
 	rot = 0.707107246,-1.15903845E-07,-9.4830412E-08,-0.707106531
@@ -7580,14 +8330,19 @@ PART
 	}
 	MODULE
 	{
-		name = FSengineSounds
+		name = ModuleResourceIntake
 		isEnabled = True
+		intakeEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -7595,13 +8350,13 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
 		EngineIgnited = False
 		engineShutdown = False
-		currentThrottle = 0.999984503
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		stagingEnabled = True
@@ -7659,26 +8414,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleResourceIntake
-		isEnabled = True
-		intakeEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = FSplanePropellerSpinner
 		isEnabled = True
 		stagingEnabled = True
@@ -7720,6 +8455,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = IntakeAir
@@ -7747,7 +8497,7 @@ PART
 {
 	part = trussPiece1x_4294066632
 	partName = Part
-	pos = -1.00605774,13.1191006,-17.3656464
+	pos = -1.00605774,13.1191006,-17.3657951
 	attPos = 0,0,0
 	attPos0 = -5.55927277,-7.62939453E-06,0
 	rot = 0.707106829,-0.707106829,0,0
@@ -7778,12 +8528,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = Mk1FuselageStructuralJr_4294066610
 	partName = Part
-	pos = -2.06702805,13.1191006,-17.3656311
+	pos = -2.067029,13.1191006,-17.3657799
 	attPos = 0.0230560284,-0.0540304184,-0.00618363544
 	attPos0 = -0.02305579,1.11499989,0.00617247587
 	rot = 0.500000179,0.500000417,-0.49999994,-0.499999791
@@ -7817,12 +8582,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = cycloneProp_4294066514
 	partName = Part
-	pos = -2.06702805,13.1190968,-16.8968658
+	pos = -2.067029,13.1190968,-16.8970032
 	attPos = 0,0,0
 	attPos0 = -2.14512994E-08,-0.468753904,2.98023473E-08
 	rot = -2.52881108E-07,-0.707106888,-0.707106888,-4.21468513E-07
@@ -7854,14 +8634,19 @@ PART
 	}
 	MODULE
 	{
-		name = FSengineSounds
+		name = ModuleResourceIntake
 		isEnabled = True
+		intakeEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -7869,13 +8654,13 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
 		EngineIgnited = False
 		engineShutdown = False
-		currentThrottle = 0.999984503
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		stagingEnabled = True
@@ -7926,26 +8711,6 @@ PART
 		}
 		ACTIONS
 		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleResourceIntake
-		isEnabled = True
-		intakeEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -7994,6 +8759,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = IntakeAir
@@ -8021,7 +8801,7 @@ PART
 {
 	part = cycloneProp_4294066420
 	partName = Part
-	pos = -2.06703186,13.1191082,-17.8343811
+	pos = -2.06703281,13.1191082,-17.8345299
 	attPos = 0,0,0
 	attPos0 = 2.14509512E-08,0.468746275,-2.98023473E-08
 	rot = 0.707107246,-1.15903845E-07,-9.4830412E-08,-0.707106531
@@ -8053,14 +8833,19 @@ PART
 	}
 	MODULE
 	{
-		name = FSengineSounds
+		name = ModuleResourceIntake
 		isEnabled = True
+		intakeEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -8068,13 +8853,13 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
 		EngineIgnited = False
 		engineShutdown = False
-		currentThrottle = 0.999984503
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		stagingEnabled = True
@@ -8132,26 +8917,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleResourceIntake
-		isEnabled = True
-		intakeEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = FSplanePropellerSpinner
 		isEnabled = True
 		stagingEnabled = True
@@ -8193,6 +8958,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = IntakeAir
@@ -8220,7 +9000,7 @@ PART
 {
 	part = trussPiece1x_4294066326
 	partName = Part
-	pos = 10.1124878,13.1191006,-17.3656464
+	pos = 10.1124878,13.1191006,-17.3657951
 	attPos = 0,0,0
 	attPos0 = 5.55927277,-7.62939453E-06,0
 	rot = 0,0,0.707106829,-0.707106829
@@ -8251,12 +9031,27 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = Mk1FuselageStructuralJr_4294066304
 	partName = Part
-	pos = 11.1734581,13.1191006,-17.3656616
+	pos = 11.1734581,13.1191006,-17.3658104
 	attPos = 0.0230560284,-0.0540304184,-0.00618363544
 	attPos0 = -0.02305579,1.11499989,0.00617247587
 	rot = 0.49999997,0.499999821,0.50000006,0.500000417
@@ -8290,15 +9085,30 @@ PART
 	PARTDATA
 	{
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = cycloneProp_4294066208
 	partName = Part
-	pos = 11.1734591,13.1190968,-17.8344116
+	pos = 11.173461,13.1190968,-17.8345604
 	attPos = 0,0,0
 	attPos0 = -2.14512994E-08,-0.468753904,2.98023473E-08
-	rot = 0.707106829,2.73954527E-07,1.47513987E-07,-0.707106948
+	rot = 0.707106888,2.73954527E-07,2.31807689E-07,-0.707106888
 	attRot = 0,0,0,1
 	attRot0 = 0.707106829,-2.98023224E-08,-0.707106769,0
 	mir = 1,1,1
@@ -8327,14 +9137,19 @@ PART
 	}
 	MODULE
 	{
-		name = FSengineSounds
+		name = ModuleResourceIntake
 		isEnabled = True
+		intakeEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -8342,13 +9157,13 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
 		EngineIgnited = False
 		engineShutdown = False
-		currentThrottle = 0.999984503
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		stagingEnabled = True
@@ -8399,26 +9214,6 @@ PART
 		}
 		ACTIONS
 		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleResourceIntake
-		isEnabled = True
-		intakeEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -8467,6 +9262,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = IntakeAir
@@ -8494,10 +9304,10 @@ PART
 {
 	part = cycloneProp_4294066114
 	partName = Part
-	pos = 11.1734619,13.1191082,-16.8968887
+	pos = 11.1734619,13.1191082,-16.8970261
 	attPos = 0,0,0
 	attPos0 = 2.14509512E-08,0.468746275,-2.98023473E-08
-	rot = 4.21468513E-08,0.70710659,0.707107067,-1.68587405E-07
+	rot = 1.26440554E-07,0.70710659,0.707107186,4.21468513E-08
 	attRot = 0,0,0.999999881,0
 	attRot0 = -7.45058149E-09,-0.707106829,-8.19563866E-08,0.707106769
 	mir = 1,1,1
@@ -8526,14 +9336,19 @@ PART
 	}
 	MODULE
 	{
-		name = FSengineSounds
+		name = ModuleResourceIntake
 		isEnabled = True
+		intakeEnabled = True
 		stagingEnabled = True
 		EVENTS
 		{
 		}
 		ACTIONS
 		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
 		}
 		UPGRADESAPPLIED
 		{
@@ -8541,13 +9356,13 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleEngines
+		name = ModuleEnginesFX
 		isEnabled = True
 		staged = False
 		flameout = False
 		EngineIgnited = False
 		engineShutdown = False
-		currentThrottle = 0.999984503
+		currentThrottle = 0
 		thrustPercentage = 100
 		manuallyOverridden = False
 		stagingEnabled = True
@@ -8605,26 +9420,6 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleResourceIntake
-		isEnabled = True
-		intakeEnabled = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
 		name = FSplanePropellerSpinner
 		isEnabled = True
 		stagingEnabled = True
@@ -8666,6 +9461,21 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 	RESOURCE
 	{
 		name = IntakeAir
@@ -8693,7 +9503,7 @@ PART
 {
 	part = dockingPort3_4294066020
 	partName = Part
-	pos = 4.55321503,13.1191158,5.13463593
+	pos = 4.55321503,13.1191158,5.13458633
 	attPos = 0,0,0
 	attPos0 = 0,-3.81469727E-06,0
 	rot = 0,0,0,1.00000012
@@ -8762,17 +9572,32 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
-	part = WBI.GondoHab_4294065980
+	part = WBI.Walkway_4294062368
 	partName = Part
-	pos = 4.55321503,7.13712978,21.5368042
-	attPos = 0,0,0
-	attPos0 = 0,-2.53399992,2.38418522E-07
-	rot = 0.707106829,0,0,0.707106829
+	pos = -0.404906273,12.5816307,8.47463417
+	attPos = -0.078599453,-3.81469727E-06,0.537485003
+	attPos0 = -4.87952185,3.34004211,0
+	rot = 0.707106888,-1.09581799E-06,1.05367133E-06,0.707106769
 	attRot = 0,0,0,1
-	attRot0 = 0,0,0,-1
+	attRot0 = -5.96046448E-08,2.98022655E-08,-1.51991844E-06,-1
 	mir = 1,1,1
 	symMethod = Mirror
 	autostrutMode = Off
@@ -8783,14 +9608,14 @@ PART
 	sidx = -1
 	sqor = -1
 	sepI = -1
-	attm = 0
-	modCost = 425
-	modMass = 1.375
+	attm = 1
+	modCost = 0
+	modMass = 0
 	modSize = 0,0,0
-	link = strutConnector_4294064866
-	link = WBI.PassengerGondola_4294064804
-	attN = front,WBI.GondoHab_4294067450
-	attN = back,WBI.PassengerGondola_4294064804
+	link = WBI.Walkway_4294057060
+	sym = WBI.Walkway_4294053006
+	srfN = srfAttach,hl10HangarDeck_4294073484
+	attN = back,WBI.Walkway_4294057060
 	EVENTS
 	{
 	}
@@ -8805,13 +9630,1564 @@ PART
 		name = WBIMeshToggle
 		isEnabled = True
 		meshesVisible = True
-		showMeshesName = Show Gondola Mount
-		hideMeshesName = Hide Gondola Mount
+		showMeshesName = Show Front Cap
+		hideMeshesName = Hide Front Cap
 		guiVisible = True
 		selectedObject = 0
 		stagingEnabled = True
 		selectedObject = 0
-		showGui = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = False
+		showMeshesName = Show Back Cap
+		hideMeshesName = Hide Back Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = Light
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1000
+		maxAmount = 1000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Snacks
+		amount = 600
+		maxAmount = 600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.Walkway_4294057060
+	partName = Part
+	pos = -0.404902458,12.5816326,5.94062424
+	attPos = 0,0,0
+	attPos0 = -3.88825538E-06,-2.53400207,-1.30319552E-06
+	rot = 0.707106769,-1.78362506E-13,-1.25607532E-14,0.707106888
+	attRot = 0,0,0,1
+	attRot0 = -1.19209275E-07,2.98022051E-08,-1.51991833E-06,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.Walkway_4294052278
+	sym = WBI.Walkway_4294052894
+	attN = front,WBI.Walkway_4294062368
+	attN = back,WBI.Walkway_4294052278
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = False
+		showMeshesName = Show Front Cap
+		hideMeshesName = Hide Front Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = False
+		showMeshesName = Show Back Cap
+		hideMeshesName = Hide Back Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = Light
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1000
+		maxAmount = 1000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Snacks
+		amount = 600
+		maxAmount = 600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.Walkway_4294053006
+	partName = Part
+	pos = 9.51133633,12.5816307,8.47463036
+	attPos = 0.0785989761,-7.62939453E-06,0.537485003
+	attPos0 = 4.87952232,3.34004211,0
+	rot = 1.02276238E-06,0.707106709,0.707106948,-1.12672649E-06
+	attRot = 0,0,0,1
+	attRot0 = -1.5199181E-06,-1,0,7.35137675E-08
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.Walkway_4294052894
+	sym = WBI.Walkway_4294062368
+	srfN = srfAttach,hl10HangarDeck_4294073484
+	attN = back,WBI.Walkway_4294052894
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = True
+		showMeshesName = Show Front Cap
+		hideMeshesName = Hide Front Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = False
+		showMeshesName = Show Back Cap
+		hideMeshesName = Hide Back Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = Light
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1000
+		maxAmount = 1000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Snacks
+		amount = 600
+		maxAmount = 600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.Walkway_4294052894
+	partName = Part
+	pos = 9.51133251,12.5816345,5.94062042
+	attPos = 0,0,0
+	attPos0 = -3.88825538E-06,-2.53400207,-1.30319552E-06
+	rot = 0.707106829,6.02915545E-14,6.02915545E-14,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = -1.19209275E-07,2.98022051E-08,-1.51991833E-06,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.Walkway_4294051200
+	sym = WBI.Walkway_4294057060
+	attN = front,WBI.Walkway_4294053006
+	attN = back,WBI.Walkway_4294051200
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = False
+		showMeshesName = Show Front Cap
+		hideMeshesName = Hide Front Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = False
+		showMeshesName = Show Back Cap
+		hideMeshesName = Hide Back Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = Light
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1000
+		maxAmount = 1000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Snacks
+		amount = 600
+		maxAmount = 600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.Walkway_4294052278
+	partName = Part
+	pos = -0.404902458,12.5816326,3.4066143
+	attPos = 0,0,0
+	attPos0 = -6.36646291E-12,-2.53400254,-6.04152433E-07
+	rot = 0.707106829,3.76823528E-15,8.79250523E-15,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 5.96046306E-08,1.49213961E-13,-1.10134117E-13,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.Walkway_4294051034
+	sym = WBI.Walkway_4294051200
+	attN = front,WBI.Walkway_4294057060
+	attN = back,WBI.Walkway_4294051034
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = False
+		showMeshesName = Show Front Cap
+		hideMeshesName = Hide Front Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = False
+		showMeshesName = Show Back Cap
+		hideMeshesName = Hide Back Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = Light
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1000
+		maxAmount = 1000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Snacks
+		amount = 600
+		maxAmount = 600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.Walkway_4294051200
+	partName = Part
+	pos = 9.51133251,12.5816326,3.40660286
+	attPos = 0,0,0
+	attPos0 = 9.09494702E-13,-2.53400445,-4.53115206E-07
+	rot = 0.707106948,-1.20583109E-13,4.01943696E-14,0.707106709
+	attRot = 0,0,0,1
+	attRot0 = 1.78813934E-07,-1.49213975E-13,1.13686838E-13,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	link = WBI.Walkway_4294046082
+	sym = WBI.Walkway_4294052278
+	attN = front,WBI.Walkway_4294052894
+	attN = back,WBI.Walkway_4294046082
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = False
+		showMeshesName = Show Front Cap
+		hideMeshesName = Hide Front Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = False
+		showMeshesName = Show Back Cap
+		hideMeshesName = Hide Back Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = Light
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1000
+		maxAmount = 1000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Snacks
+		amount = 600
+		maxAmount = 600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.Walkway_4294051034
+	partName = Part
+	pos = -0.404902458,12.5816364,0.872562408
+	attPos = 0,0,0
+	attPos0 = -3.98931322E-12,-2.53400588,1.90734863E-06
+	rot = -2.07251852E-14,0.707106829,-0.707106829,1.69569796E-14
+	attRot = 0,0,-0.99999994,0
+	attRot0 = -1.7763364E-15,3.55271368E-15,-1,-5.3290684E-15
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = WBI.Walkway_4294046082
+	attN = back,WBI.Walkway_4294052278
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = True
+		showMeshesName = Show Front Cap
+		hideMeshesName = Hide Front Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = False
+		showMeshesName = Show Back Cap
+		hideMeshesName = Hide Back Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = Light
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1000
+		maxAmount = 1000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Snacks
+		amount = 600
+		maxAmount = 600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.Walkway_4294046082
+	partName = Part
+	pos = 9.51133251,12.5816383,0.872554779
+	attPos = 0,0,0
+	attPos0 = -3.30465191E-12,-2.53400826,2.3604664E-06
+	rot = -1.48216793E-13,-0.707106888,0.707106769,-1.25606855E-14
+	attRot = 0,0,-0.99999994,0
+	attRot0 = 1.77634985E-15,8.94069814E-08,1,-2.11758212E-22
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	sym = WBI.Walkway_4294051034
+	attN = back,WBI.Walkway_4294051200
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = True
+		showMeshesName = Show Front Cap
+		hideMeshesName = Hide Front Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIMeshToggle
+		isEnabled = True
+		meshesVisible = False
+		showMeshesName = Show Back Cap
+		hideMeshesName = Hide Back Cap
+		guiVisible = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = Light
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 1000
+		maxAmount = 1000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Snacks
+		amount = 600
+		maxAmount = 600
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = WBI.GondoHab2_4293489060
+	partName = Part
+	pos = 4.55321503,6.21112728,24.0708103
+	attPos = 0,0,0
+	attPos0 = 0,-1.6890012,0.926000595
+	rot = 0.707106829,0,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,-1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 400
+	modMass = 0.75
+	modSize = 0,0,0
+	link = strutConnector_4293429302
+	link = WBI.GondoHab2_4293426958
+	attN = front,WBI.HL10CommandCab_4294159462
+	attN = back,WBI.GondoHab2_4293426958
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISItemEvaTweaker
+		isEnabled = True
+		staticAttached = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIMeshHelper
+		isEnabled = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
 		EVENTS
 		{
 		}
@@ -8885,13 +11261,8 @@ PART
 	}
 	MODULE
 	{
-		name = WBILight
+		name = WBIAnimation
 		isEnabled = True
-		ecRequired = 0.040000000000000001
-		red = 1
-		green = 1
-		blue = 1
-		level = 1
 		guiIsVisible = True
 		stagingEnabled = True
 		isDeployed = False
@@ -8900,10 +11271,6 @@ PART
 		}
 		ACTIONS
 		{
-			ToggleLightsAction
-			{
-				actionGroup = Light
-			}
 			ToggleAnimationAction
 			{
 				actionGroup = None
@@ -8970,16 +11337,16 @@ PART
 		name = WBIMultipurposeHab
 		isEnabled = True
 		currentVolume = 0
-		templateNodes = GONDOHAB;PATH_HABITATION
-		baseStorage = 800
+		templateNodes = GONDOCOMMON;GONDOHAB;PATH_HABITATION
+		baseStorage = 0
 		maxStorage = 800
 		decalsVisible = False
 		fillToMaxInEditor = True
 		capacityFactor = 0.25
-		partMass = 1.375
-		templateName = GondoHab
+		partMass = 0.75
+		templateName = Empty
 		shortName = 
-		isDeployed = False
+		isDeployed = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -8991,47 +11358,6 @@ PART
 				actionGroup = None
 			}
 		}
-		RESOURCE
-		{
-			name = Soil
-			amount = 0
-			maxAmount = 50
-			flowState = True
-			isTweakable = True
-			hideFlow = False
-			isVisible = True
-			flowMode = Both
-		}
-		WBIMODULE
-		{
-			name = SoilRecycler
-			isEnabled = True
-			EfficiencyBonus = 1
-			IsActivated = False
-			stagingEnabled = True
-			lastUpdateTime = 0
-			EVENTS
-			{
-			}
-			ACTIONS
-			{
-				StopResourceConverterAction
-				{
-					actionGroup = None
-				}
-				StartResourceConverterAction
-				{
-					actionGroup = None
-				}
-				ToggleResourceConverterAction
-				{
-					actionGroup = None
-				}
-			}
-			UPGRADESAPPLIED
-			{
-			}
-		}
 		UPGRADESAPPLIED
 		{
 		}
@@ -9039,6 +11365,37 @@ PART
 	MODULE
 	{
 		name = WBIPropStateHelper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExWorkshop
+		isEnabled = True
+		stagingEnabled = True
+		lastUpdateString = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
 		isEnabled = True
 		stagingEnabled = True
 		EVENTS
@@ -9073,9 +11430,485 @@ PART
 			resourceName = Snacks
 			mode = 0
 		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	RESOURCE
+	{
+		name = ElectricCharge
+		amount = 2000
+		maxAmount = 2000
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+	RESOURCE
+	{
+		name = Snacks
+		amount = 800
+		maxAmount = 800
+		flowState = True
+		isTweakable = True
+		hideFlow = False
+		isVisible = True
+		flowMode = Both
+	}
+}
+PART
+{
+	part = strutConnector_4293429302
+	partName = CompoundPart
+	pos = 4.55321503,7.83785295,22.8040657
+	attPos = 0,0,0
+	attPos0 = 0,-1.26674247,-1.62672365
+	rot = 0.707106829,0,0.707106829,0
+	attRot = 0,0,0,1
+	attRot0 = 0.5,0.5,0.5,0.5
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 1
+	modCost = 0
+	modMass = 0
+	modSize = 0,0,0
+	srfN = srfAttach,WBI.GondoHab2_4293489060
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+		tgt = 4294075104
+		pos = -1.11075425,-0.312478542,-0.116376832
+		rot = 0,0.183012396,0.683012605,0.707106948
+		dir = -0.957768559,-0.269462407,-0.100346193
+	}
+	MODULE
+	{
+		name = CModuleLinkedMesh
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = CModuleStrut
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+}
+PART
+{
+	part = WBI.GondoHab2_4293426958
+	partName = Part
+	pos = 4.55321503,6.21112823,21.5368061
+	attPos = 0,0,0
+	attPos0 = 0,-2.53400016,0
+	rot = 0.707106829,0,0,0.707106829
+	attRot = 0,0,0,1
+	attRot0 = 0,0,0,1
+	mir = 1,1,1
+	symMethod = Mirror
+	autostrutMode = Off
+	rigidAttachment = False
+	istg = -1
+	resPri = 0
+	dstg = 0
+	sidx = -1
+	sqor = -1
+	sepI = -1
+	attm = 0
+	modCost = 400
+	modMass = 0.75
+	modSize = 0,0,0
+	link = strutConnector_4293425712
+	link = WBI.PassengerGondola_4294064804
+	attN = front,WBI.GondoHab2_4293489060
+	attN = back,WBI.PassengerGondola_4294064804
+	EVENTS
+	{
+	}
+	ACTIONS
+	{
+	}
+	PARTDATA
+	{
+	}
+	MODULE
+	{
+		name = ModuleKISItemEvaTweaker
+		isEnabled = True
+		staticAttached = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIMeshHelper
+		isEnabled = True
+		selectedObject = 0
+		stagingEnabled = True
+		selectedObject = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleScienceContainer
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			CollectAllAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleKISInventory
+		isEnabled = True
+		invName = 
+		helmetEquipped = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		isEnabled = True
+		aniState = LOCKED
+		animSwitch = True
+		animTime = 0
+		animSpeed = 1
+		deployPercent = 100
+		animationIsDisabled = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIAnimation
+		isEnabled = True
+		guiIsVisible = True
+		stagingEnabled = True
+		isDeployed = False
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ToggleAnimationAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = FlagDecal
+		isEnabled = True
+		flagDisplayed = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ModuleDeployableSolarPanel
+		isEnabled = True
+		efficiencyMult = 1
+		launchUT = -1
+		currentRotation = (1, 1.62920671E-07, 1.62920699E-07, 8.94069956E-08)
+		storedAnimationTime = 0
+		storedAnimationSpeed = 0
+		deployState = EXTENDED
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			ExtendPanelsAction
+			{
+				actionGroup = None
+				active = False
+			}
+			ExtendAction
+			{
+				actionGroup = None
+				active = False
+			}
+			RetractAction
+			{
+				actionGroup = None
+				active = False
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIMultipurposeHab
+		isEnabled = True
+		currentVolume = 0
+		templateNodes = GONDOCOMMON;GONDOHAB;PATH_HABITATION
+		baseStorage = 0
+		maxStorage = 800
+		decalsVisible = False
+		fillToMaxInEditor = True
+		capacityFactor = 0.25
+		partMass = 0.75
+		templateName = Empty
+		shortName = 
+		isDeployed = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+			DumpResourcesAction
+			{
+				actionGroup = None
+			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPropStateHelper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExWorkshop
+		isEnabled = True
+		stagingEnabled = True
+		lastUpdateString = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIResourceDistributor
+		isEnabled = True
+		isParticipating = False
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
 		DISTRIBUTION
 		{
-			resourceName = Soil
+			resourceName = ElectricCharge
+			mode = 0
+		}
+		DISTRIBUTION
+		{
+			resourceName = Snacks
 			mode = 0
 		}
 		UPGRADESAPPLIED
@@ -9150,36 +11983,6 @@ PART
 		{
 		}
 	}
-	MODULE
-	{
-		name = SoilRecycler
-		isEnabled = True
-		EfficiencyBonus = 1
-		IsActivated = False
-		stagingEnabled = True
-		lastUpdateTime = 0
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			StopResourceConverterAction
-			{
-				actionGroup = None
-			}
-			StartResourceConverterAction
-			{
-				actionGroup = None
-			}
-			ToggleResourceConverterAction
-			{
-				actionGroup = None
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
 	RESOURCE
 	{
 		name = ElectricCharge
@@ -9202,25 +12005,14 @@ PART
 		isVisible = True
 		flowMode = Both
 	}
-	RESOURCE
-	{
-		name = Soil
-		amount = 0
-		maxAmount = 50
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
 }
 PART
 {
-	part = strutConnector_4294064866
+	part = strutConnector_4293425712
 	partName = CompoundPart
-	pos = 4.55321503,7.96158123,20.2697678
+	pos = 4.55321503,7.83785391,20.2700615
 	attPos = 0,0,0
-	attPos0 = 7.20749966E-08,-1.2670356,-0.824441969
+	attPos0 = 0,-1.26674247,-1.62672365
 	rot = 0.707106829,0,0.707106829,0
 	attRot = 0,0,0,1
 	attRot0 = 0.5,0.5,0.5,0.5
@@ -9238,7 +12030,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	srfN = srfAttach,WBI.GondoHab_4294065980
+	srfN = srfAttach,WBI.GondoHab2_4293426958
 	EVENTS
 	{
 	}
@@ -9247,10 +12039,10 @@ PART
 	}
 	PARTDATA
 	{
-		tgt = 4294064804
-		pos = -1.14440918E-05,-1.43051102E-06,4.76836988E-07
-		rot = 0,0,0,1.00000024
-		dir = -0.991430819,-0.123928815,0.0413096026
+		tgt = 4294074922
+		pos = -1.11093712,-0.312543392,-0.116394952
+		rot = 0,0.183012396,0.683012605,0.707106948
+		dir = -0.957768559,-0.269462407,-0.100346193
 	}
 	MODULE
 	{
@@ -9282,14 +12074,29 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.PassengerGondola_4294064804
 	partName = Part
-	pos = 4.55321503,7.13712978,19.0027885
+	pos = 4.55321503,7.13712978,19.0028
 	attPos = 0,0,0
-	attPos0 = 0,-2.53400159,4.76836931E-07
+	attPos0 = 0,-2.53400135,-0.925999641
 	rot = 0.707106829,0,0,0.707106829
 	attRot = 0,0,0,1
 	attRot0 = 0,0,0,1
@@ -9309,7 +12116,7 @@ PART
 	modSize = 0,0,0
 	link = strutConnector_4294063672
 	link = WBI.PassengerGondola_4294063610
-	attN = front,WBI.GondoHab_4294065980
+	attN = front,WBI.GondoHab2_4293426958
 	attN = back,WBI.PassengerGondola_4294063610
 	EVENTS
 	{
@@ -9331,7 +12138,6 @@ PART
 		selectedObject = 0
 		stagingEnabled = True
 		selectedObject = 0
-		showGui = False
 		EVENTS
 		{
 		}
@@ -9461,6 +12267,37 @@ PART
 				actionGroup = None
 				active = False
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExWorkshop
+		isEnabled = True
+		stagingEnabled = True
+		lastUpdateString = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -9765,7 +12602,7 @@ PART
 {
 	part = strutConnector_4294063672
 	partName = CompoundPart
-	pos = 4.55321503,7.94136047,17.7357521
+	pos = 4.55321503,7.94136238,17.7357597
 	attPos = 0,0,0
 	attPos0 = 0,-1.26703751,-0.804229081
 	rot = 0.707106829,0,0.707106829,0
@@ -9829,12 +12666,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.PassengerGondola_4294063610
 	partName = Part
-	pos = 4.55321503,7.13712978,16.4687843
+	pos = 4.55321503,7.13712883,16.4687881
 	attPos = 0,0,0
 	attPos0 = 0,-2.53400183,0
 	rot = 0.707106829,0,0,0.707106829
@@ -9878,7 +12730,6 @@ PART
 		selectedObject = 0
 		stagingEnabled = True
 		selectedObject = 0
-		showGui = False
 		EVENTS
 		{
 		}
@@ -10008,6 +12859,37 @@ PART
 				actionGroup = None
 				active = False
 			}
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = ExWorkshop
+		isEnabled = True
+		stagingEnabled = True
+		lastUpdateString = 0
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
 		}
 		UPGRADESAPPLIED
 		{
@@ -10312,7 +13194,7 @@ PART
 {
 	part = strutConnector_4294062478
 	partName = CompoundPart
-	pos = 4.55321503,7.94135952,15.201746
+	pos = 4.55321503,7.94136143,15.2017469
 	attPos = 0,0,0
 	attPos0 = 0,-1.26703751,-0.804229081
 	rot = 0.707106829,0,0.707106829,0
@@ -10342,8 +13224,8 @@ PART
 	PARTDATA
 	{
 		tgt = 4294074922
-		pos = -0.712765694,-0.185930133,-0.0302162059
-		rot = -3.72529074E-09,0.183012441,0.683012784,0.707107127
+		pos = -0.712861538,-0.185943305,-0.0302219279
+		rot = 0,0.183012396,0.683012605,0.707106948
 		dir = -0.966807127,-0.252198696,-0.0409857593
 	}
 	MODULE
@@ -10376,12 +13258,27 @@ PART
 		{
 		}
 	}
+	MODULE
+	{
+		name = WBIPartScrapper
+		isEnabled = True
+		stagingEnabled = True
+		EVENTS
+		{
+		}
+		ACTIONS
+		{
+		}
+		UPGRADESAPPLIED
+		{
+		}
+	}
 }
 PART
 {
 	part = WBI.FairingType1_4294062416
 	partName = Part
-	pos = 4.55321503,7.13712978,15.2017822
+	pos = 4.55321503,7.13712883,15.2017822
 	attPos = 0,0,0
 	attPos0 = 0,-1.26700175,0
 	rot = 0.707106829,0,0,0.707106829
@@ -10422,148 +13319,6 @@ PART
 		selectedObject = 0
 		stagingEnabled = True
 		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-}
-PART
-{
-	part = WBI.Walkway_4294062368
-	partName = Part
-	pos = -0.404906273,12.5816307,8.47467995
-	attPos = -0.078599453,-3.81469727E-06,0.537485003
-	attPos0 = -4.87952185,3.34004211,0
-	rot = 0.707106888,-1.09581799E-06,1.05367133E-06,0.707106769
-	attRot = 0,0,0,1
-	attRot0 = -5.96046448E-08,2.98022655E-08,-1.51991844E-06,-1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = WBI.Walkway_4294057060
-	sym = WBI.Walkway_4294053006
-	srfN = srfAttach,hl10HangarDeck_4294073484
-	attN = back,WBI.Walkway_4294057060
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = True
-		showMeshesName = Show Front Cap
-		hideMeshesName = Hide Front Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = False
-		showMeshesName = Show Back Cap
-		hideMeshesName = Hide Back Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = Light
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
 		EVENTS
 		{
 		}
@@ -10593,10 +13348,8 @@ PART
 	}
 	MODULE
 	{
-		name = ModuleKISInventory
+		name = WBIPartScrapper
 		isEnabled = True
-		invName = 
-		helmetEquipped = True
 		stagingEnabled = True
 		EVENTS
 		{
@@ -10607,1283 +13360,5 @@ PART
 		UPGRADESAPPLIED
 		{
 		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 1000
-		maxAmount = 1000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Snacks
-		amount = 600
-		maxAmount = 600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = WBI.Walkway_4294057060
-	partName = Part
-	pos = -0.404902458,12.5816326,5.94067574
-	attPos = 0,0,0
-	attPos0 = -3.88825538E-06,-2.53400207,-1.30319552E-06
-	rot = 0.707106769,-1.8966717E-13,-2.38654176E-14,0.707106888
-	attRot = 0,0,0,1
-	attRot0 = -1.19209275E-07,2.98022051E-08,-1.51991833E-06,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = WBI.Walkway_4294052278
-	sym = WBI.Walkway_4294052894
-	attN = front,WBI.Walkway_4294062368
-	attN = back,WBI.Walkway_4294052278
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = False
-		showMeshesName = Show Front Cap
-		hideMeshesName = Hide Front Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = False
-		showMeshesName = Show Back Cap
-		hideMeshesName = Hide Back Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = Light
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 1000
-		maxAmount = 1000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Snacks
-		amount = 600
-		maxAmount = 600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = WBI.Walkway_4294053006
-	partName = Part
-	pos = 9.51133633,12.5816307,8.47467613
-	attPos = 0.0785989761,-7.62939453E-06,0.537485003
-	attPos0 = 4.87952232,3.34004211,0
-	rot = 1.02276238E-06,0.707106709,0.707106948,-1.12672649E-06
-	attRot = 0,0,0,1
-	attRot0 = -1.5199181E-06,-1,0,7.35137675E-08
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 1
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = WBI.Walkway_4294052894
-	sym = WBI.Walkway_4294062368
-	srfN = srfAttach,hl10HangarDeck_4294073484
-	attN = back,WBI.Walkway_4294052894
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = True
-		showMeshesName = Show Front Cap
-		hideMeshesName = Hide Front Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = False
-		showMeshesName = Show Back Cap
-		hideMeshesName = Hide Back Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = Light
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 1000
-		maxAmount = 1000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Snacks
-		amount = 600
-		maxAmount = 600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = WBI.Walkway_4294052894
-	partName = Part
-	pos = 9.51133251,12.5816326,5.94067192
-	attPos = 0,0,0
-	attPos0 = -3.88825538E-06,-2.53400207,-1.30319552E-06
-	rot = 0.707106769,1.85898958E-13,2.51214793E-14,0.707106888
-	attRot = 0,0,0,1
-	attRot0 = -1.19209275E-07,2.98022051E-08,-1.51991833E-06,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = WBI.Walkway_4294051200
-	sym = WBI.Walkway_4294057060
-	attN = front,WBI.Walkway_4294053006
-	attN = back,WBI.Walkway_4294051200
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = False
-		showMeshesName = Show Front Cap
-		hideMeshesName = Hide Front Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = False
-		showMeshesName = Show Back Cap
-		hideMeshesName = Hide Back Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = Light
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 1000
-		maxAmount = 1000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Snacks
-		amount = 600
-		maxAmount = 600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = WBI.Walkway_4294052278
-	partName = Part
-	pos = -0.404902458,12.5816326,3.40667152
-	attPos = 0,0,0
-	attPos0 = -6.36646291E-12,-2.53400254,-6.04152433E-07
-	rot = 0.707106829,-5.02428604E-15,-1.03761536E-20,0.707106829
-	attRot = 0,0,0,1
-	attRot0 = 5.96046306E-08,1.49213961E-13,-1.10134117E-13,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = WBI.Walkway_4294051034
-	sym = WBI.Walkway_4294051200
-	attN = front,WBI.Walkway_4294057060
-	attN = back,WBI.Walkway_4294051034
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = False
-		showMeshesName = Show Front Cap
-		hideMeshesName = Hide Front Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = False
-		showMeshesName = Show Back Cap
-		hideMeshesName = Hide Back Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = Light
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 1000
-		maxAmount = 1000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Snacks
-		amount = 600
-		maxAmount = 600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = WBI.Walkway_4294051200
-	partName = Part
-	pos = 9.51133251,12.5816326,3.40666199
-	attPos = 0,0,0
-	attPos0 = 9.09494702E-13,-2.53400445,-4.53115206E-07
-	rot = 0.707106888,0,0,0.707106769
-	attRot = 0,0,0,1
-	attRot0 = 1.78813934E-07,-1.49213975E-13,1.13686838E-13,1
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	link = WBI.Walkway_4294046082
-	sym = WBI.Walkway_4294052278
-	attN = front,WBI.Walkway_4294052894
-	attN = back,WBI.Walkway_4294046082
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = False
-		showMeshesName = Show Front Cap
-		hideMeshesName = Hide Front Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = False
-		showMeshesName = Show Back Cap
-		hideMeshesName = Hide Back Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = Light
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 1000
-		maxAmount = 1000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Snacks
-		amount = 600
-		maxAmount = 600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = WBI.Walkway_4294051034
-	partName = Part
-	pos = -0.404902458,12.5816326,0.872655869
-	attPos = 0,0,0
-	attPos0 = -3.98931322E-12,-2.53400588,1.90734863E-06
-	rot = -6.28033129E-15,0.707106829,-0.707106829,1.25605542E-15
-	attRot = 0,0,-0.99999994,0
-	attRot0 = -1.7763364E-15,3.55271368E-15,-1,-5.3290684E-15
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = WBI.Walkway_4294046082
-	attN = back,WBI.Walkway_4294052278
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = True
-		showMeshesName = Show Front Cap
-		hideMeshesName = Hide Front Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = False
-		showMeshesName = Show Back Cap
-		hideMeshesName = Hide Back Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = Light
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 1000
-		maxAmount = 1000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Snacks
-		amount = 600
-		maxAmount = 600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-}
-PART
-{
-	part = WBI.Walkway_4294046082
-	partName = Part
-	pos = 9.51133251,12.5816326,0.872648239
-	attPos = 0,0,0
-	attPos0 = -3.30465191E-12,-2.53400826,2.3604664E-06
-	rot = -1.88418773E-15,-0.707106829,0.707106829,1.88418773E-15
-	attRot = 0,0,-0.99999994,0
-	attRot0 = 1.77634985E-15,8.94069814E-08,1,-2.11758212E-22
-	mir = 1,1,1
-	symMethod = Mirror
-	autostrutMode = Off
-	rigidAttachment = False
-	istg = -1
-	resPri = 0
-	dstg = 0
-	sidx = -1
-	sqor = -1
-	sepI = -1
-	attm = 0
-	modCost = 0
-	modMass = 0
-	modSize = 0,0,0
-	sym = WBI.Walkway_4294051034
-	attN = back,WBI.Walkway_4294051200
-	EVENTS
-	{
-	}
-	ACTIONS
-	{
-	}
-	PARTDATA
-	{
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = True
-		showMeshesName = Show Front Cap
-		hideMeshesName = Hide Front Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = WBIMeshToggle
-		isEnabled = True
-		meshesVisible = False
-		showMeshesName = Show Back Cap
-		hideMeshesName = Hide Back Cap
-		guiVisible = True
-		selectedObject = 0
-		stagingEnabled = True
-		selectedObject = 0
-		showGui = False
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleAnimateGeneric
-		isEnabled = True
-		aniState = LOCKED
-		animSwitch = True
-		animTime = 0
-		animSpeed = 1
-		deployPercent = 100
-		animationIsDisabled = False
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-			ToggleAction
-			{
-				actionGroup = Light
-			}
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	MODULE
-	{
-		name = ModuleKISInventory
-		isEnabled = True
-		invName = 
-		helmetEquipped = True
-		stagingEnabled = True
-		EVENTS
-		{
-		}
-		ACTIONS
-		{
-		}
-		UPGRADESAPPLIED
-		{
-		}
-	}
-	RESOURCE
-	{
-		name = ElectricCharge
-		amount = 1000
-		maxAmount = 1000
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
-	}
-	RESOURCE
-	{
-		name = Snacks
-		amount = 600
-		maxAmount = 600
-		flowState = True
-		isTweakable = True
-		hideFlow = False
-		isVisible = True
-		flowMode = Both
 	}
 }

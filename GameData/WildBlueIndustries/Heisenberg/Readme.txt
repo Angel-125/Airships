@@ -19,6 +19,19 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.4.0
+New Parts
+- GondoBalcony: This part is handy for preventing kerbals from opening the door on Bison office buildings, stepping outside, and experiencing a sudden stop at the end. You can toggle the central railing to extend the balcony.
+- Construction Pad: Designed for the roof of a Bison module, the Construction Pad provides a landing spot for your aircraft. With ExtraplanetaryLaunchpads installed, it also doubles as a launchpad for new vessel construction.
+- Pad Extension: Also designed for the roof of a Bison module, this pad extension makes your landing pads larger.
+
+Bug Fixes & Enhancements
+- WBT Update
+- The GondoHab, GondoLab, and GondoGarden can now be broken down for easy transport and set up as office buildings, just like the GondOffice. The new ability is only available to new constructions.
+- Fixed the VAB/SPH part icon for the GondOffice.
+- The GondOffice's conference phone can now change the internal light color from white, blue, and off.
+- Fixed IVA overlay positioning of the GondOffice.
+
 2.3.0
 New Parts
 - WB-12 "Tornado": This 50kn ducted fan runs on 50 ElectricCharge per second- conveniently the same amount produced by the big solar panel... It can tilt up and down to aid in airship operations.
