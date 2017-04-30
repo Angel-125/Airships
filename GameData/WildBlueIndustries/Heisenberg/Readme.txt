@@ -19,6 +19,12 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.4.1
+- Minor update to consolidate RPM/ASET ModuleManager patches into one file.
+- VTOL Manager has improved hover management during low framerate conditions.
+- Fix for IVA screens not remembering what image they were displaying.
+- GondoLab has all of its templates again.
+
 2.4.0
 New Parts
 - GondoBalcony: This part is handy for preventing kerbals from opening the door on Bison office buildings, stepping outside, and experiencing a sudden stop at the end. You can toggle the central railing to extend the balcony.
