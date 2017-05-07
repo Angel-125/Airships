@@ -19,6 +19,12 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.4.2
+- Gondola Storage Units now all have both internal and external KIS inventory access.
+- The GondoLab and GondoHab now have 800-liters of KIS storage regardless of configuration.
+- Removed experimental WBINodeStripper; it was causing KAS issues.
+- Recompiled Kerbal Actuators.
+
 2.4.1
 - Minor update to consolidate RPM/ASET ModuleManager patches into one file.
 - VTOL Manager has improved hover management during low framerate conditions.
