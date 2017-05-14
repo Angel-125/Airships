@@ -19,7 +19,10 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
-2.4.3
+New Part
+Cargo Gondola Type 2: This gondola component has gull-wing doors instead of slide-out doors, and it lacks a cargo ramp.
+
+Bug Fixes & Enhancements
 - Gondola Storage Units can now participate in Pathfinder's resource distribution.
 - Fixed Crash To Desktop issues experienced at startup that are associated with Kerbal Actuators.
 - Revised Kerbal Actuators GUI.
