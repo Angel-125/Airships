@@ -19,6 +19,8 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.5.0
+
 New Part
 Cargo Gondola Type 2: This gondola component has gull-wing doors instead of slide-out doors, and it lacks a cargo ramp.
 
