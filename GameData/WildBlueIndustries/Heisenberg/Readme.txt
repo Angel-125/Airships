@@ -19,6 +19,11 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.4.3
+- Gondola Storage Units can now participate in Pathfinder's resource distribution.
+- Fixed Crash To Desktop issues experienced at startup that are associated with Kerbal Actuators.
+- Revised Kerbal Actuators GUI.
+
 2.4.2
 - Gondola Storage Units now all have both internal and external KIS inventory access.
 - The GondoLab and GondoHab now have 800-liters of KIS storage regardless of configuration.
