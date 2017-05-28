@@ -19,6 +19,14 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.6.0
+- Recompiled plugin for KSP 1.3.
+- Increased KIS storage in the airship hulls.
+- You can convert Equipment into MaterialKits in the Workshop.
+- The WB-22 "Typhoon" can be upgraded to increase thrust.
+- The GTG-125 Gas Turbine Generator can be upgraded to increase ElectricCharge output.
+- Updated Snacks support.
+
 2.5.0
 
 New Part
