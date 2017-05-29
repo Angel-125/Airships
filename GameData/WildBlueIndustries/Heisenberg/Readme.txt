@@ -19,6 +19,10 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.6.1
+- Recompiled Kerbal Actuators.
+- Community Resource Pack Update
+
 2.6.0
 - Recompiled plugin for KSP 1.3.
 - Increased KIS storage in the airship hulls.
