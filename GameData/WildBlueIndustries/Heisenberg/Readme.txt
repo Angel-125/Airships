@@ -19,6 +19,61 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.7.0 Nuclear Option
+
+This release fulfills my initial vision for the mod; an airship with electric motors and a nuclear reactor for flying on other planets! It also makes it possible to create really big airships with huge hangar bays.
+
+NOTE: The Cyclone no longer requires Firespitter. You will find two versions of it in the catalog. One is marked (DEPRECATED). BE SURE TO UPDATE YOUR VAB/SPH CRAFT WITH THE NEW VERSION! It's the one without (DEPRECATED) in its title. Next release the (DEPRECATED) Cyclone won't be available in the catalog, but won't break any craft in the field.
+
+New Parts
+- Half-Side Flight Deck: one side is omitted to enable the creation of large hangar decks.
+- Half-Side Aircraft Elevator: one side is omitted to enable the creation of large hangar decks.
+- Top-Side Flight Deck: both sides are omitted to enable the creation of large hangar decks.
+- GTG-250-H: This part is a gas turbine generator that produces up to 250 EC/sec. Its output is controlled by the throttle setting. If the Buffalo mod is installed, then this part is automatically deprecated and unavailable to new vessels; there is an equivalent in the Buffalo mod.
+- Nuclear Gyro Ring: Combine the current gyro ring with a nuclear reactor capable of generating 1000 EC/sec, and you have the nuclear gyro ring. Just watch out for the sticker shock.
+- WB-50 "Jet Stream" Electric Prop: This Size 2 (2.5m) stack-mounted electric propeller produces huge amounts of thrust- and needs huge amounts of ElectricCharge as well.
+- WB-25 "Twister" Electric Prop: This is a smaller Size 1 (1.25m) stack-mounted electric propeller.
+
+Bug Fixes & Enhancements
+- The HL10 Side Elevator has new mesh options: Twin Elevator Railings, Left Rail, and Right Rail. For these options, the back wall of the elevator is omitted; great for making large hangars.
+- Increased power output on the Gyro Ring.
+- The Cyclone no longer depends upon Firespitter. NOTE: the Firespitter version of the Cyclone is still included, but only if you have Firespitter installed. It is marked (DEPRECATED). BE SURE TO REBUILD YOUR VAB/SPH CRAFT WITH THE NEW VERSION!
+- Fixed issues with forward/reverse thrust on the ducted fan.
+- Fixed issues with the HL-10 Gyro Ring not producing ElectricCharge.
+
+2.6.1
+- Recompiled Kerbal Actuators.
+
+2.6.0
+- Recompiled plugin for KSP 1.3.
+- Increased KIS storage in the airship hulls.
+- You can convert Equipment into MaterialKits in the Workshop.
+- The WB-22 "Typhoon" can be upgraded to increase thrust.
+- The GTG-125 Gas Turbine Generator can be upgraded to increase ElectricCharge output.
+- Updated Snacks support.
+
+2.5.0
+
+New Part
+Cargo Gondola Type 2: This gondola component has gull-wing doors instead of slide-out doors, and it lacks a cargo ramp.
+
+Bug Fixes & Enhancements
+- Gondola Storage Units can now participate in Pathfinder's resource distribution.
+- Fixed Crash To Desktop issues experienced at startup that are associated with Kerbal Actuators.
+- Revised Kerbal Actuators GUI.
+
+2.4.2
+- Gondola Storage Units now all have both internal and external KIS inventory access.
+- The GondoLab and GondoHab now have 800-liters of KIS storage regardless of configuration.
+- Removed experimental WBINodeStripper; it was causing KAS issues.
+- Recompiled Kerbal Actuators.
+
+2.4.1
+- Minor update to consolidate RPM/ASET ModuleManager patches into one file.
+- VTOL Manager has improved hover management during low framerate conditions.
+- Fix for IVA screens not remembering what image they were displaying.
+- GondoLab has all of its templates again.
+
 2.4.0
 New Parts
 - GondoBalcony: This part is handy for preventing kerbals from opening the door on Bison office buildings, stepping outside, and experiencing a sudden stop at the end. You can toggle the central railing to extend the balcony.
