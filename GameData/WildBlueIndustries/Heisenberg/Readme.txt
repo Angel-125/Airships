@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.7.1
+- Fixed NRE issues.
+
 2.7.0 Nuclear Option
 
 This release fulfills my initial vision for the mod; an airship with electric motors and a nuclear reactor for flying on other planets! It also makes it possible to create really big airships with huge hangar bays.
