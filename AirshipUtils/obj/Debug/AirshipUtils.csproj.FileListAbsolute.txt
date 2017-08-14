@@ -15,3 +15,10 @@ C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.x
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.csprojResolveAssemblyReference.cache
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.pdb
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\BARIS.dll
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\BARIS.pdb
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\MarkdownSeparator.exe
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\RunPowershell.bat
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\xmldoc2md.ps1
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\xmldoc2md.xsl
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\RunMDSeparator.bat
