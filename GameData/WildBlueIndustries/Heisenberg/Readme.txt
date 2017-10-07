@@ -19,6 +19,14 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.8.6
+- All configurable parts now require an Engineer to reconfigure instead of a mix of Engineer and Scientist.
+- Fixed issues with CompressedAir RCS thrusters that resulted from the latest CRP update.
+- Play mode support added.
+- CRP is now a separate download.
+- Added support for Classic Stock play mode and Pristine mode.
+- Updated to KSP 1.3.1.
+
 2.8.5
 - BARIS is now an optional download as originally intended- just took awhile for me to figure out how to make that work. DO NOT DELETE the 000ABARISBridgeDoNotDelete FOLDER! That plugin is the bridge between this mod and BARIS.
 
