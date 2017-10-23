@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.8.7.1
+- Fix for HL-10 Gyro Ring compressor not producing Compressed Atmosphere.
+
 2.8.7
 - Fixed KIS isues with flight deck inventory storage.
 - Sound fixes for flight deck parts.
