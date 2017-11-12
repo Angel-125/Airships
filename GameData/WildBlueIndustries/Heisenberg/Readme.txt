@@ -19,6 +19,11 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.8.8
+- Fixed missing power requirements for the Gondo Drill.
+- Hid deprecated version of the Cyclone engine.
+- WBT update
+
 2.8.7.1
 - Fix for HL-10 Gyro Ring compressor not producing Compressed Atmosphere.
 
