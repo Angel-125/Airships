@@ -19,6 +19,11 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.8.9
+- TAC-LS balancing- thanks Space Kadet! :)
+- Fixed missing resource icons
+- WBT Update
+
 2.8.8
 - Fixed missing power requirements for the Gondo Drill.
 - Hid deprecated version of the Cyclone engine.
