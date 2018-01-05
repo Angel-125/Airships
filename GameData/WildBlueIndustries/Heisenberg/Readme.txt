@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.9.0
+- WBT Update
+
 2.8.9
 - TAC-LS balancing- thanks Space Kadet! :)
 - Fixed missing resource icons
