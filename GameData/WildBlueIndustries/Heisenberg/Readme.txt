@@ -22,6 +22,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 2.9.0
 - WBT Update
 
+ARP Icons
+Added new Alternate Resource Panel icons courtesy of JadeOfMaar. These look great! :)
+
 2.8.9
 - TAC-LS balancing- thanks Space Kadet! :)
 - Fixed missing resource icons
