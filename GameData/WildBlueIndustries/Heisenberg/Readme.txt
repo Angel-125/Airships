@@ -19,6 +19,10 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.9.1
+- WBT update
+- Module Manager update
+
 2.9.0
 - WBT Update
 
