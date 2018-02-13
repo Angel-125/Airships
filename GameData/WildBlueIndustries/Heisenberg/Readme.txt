@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.9.3
+- Fixed issues with the gyro rings.
+
 2.9.2
 - WBT update
 
