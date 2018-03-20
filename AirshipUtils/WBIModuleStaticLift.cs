@@ -18,13 +18,28 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 namespace WildBlueIndustries
 {
+    /// <summary>
+    /// This part module provides static lift based upon the lifting gas density and volume.
+    /// Be sure to account for the lifting gas's mass in the part mass.
+    /// </summary>
     public class WBIModuleStaticLift : PartModule
     {
-        [KSPField(guiName = "Lift", guiActive = true, guiUnits = "kN", guiFormat = "f9")]
+        /*
+         * Think about how to manage vessel total lift. might need one part module to handle all of it.
+         * The first static lift module runs the ship.
+         */
+
+        [KSPField(guiName = "Lift", guiActive = true, guiUnits = "kN", guiFormat = "n2")]
         public double liftForce;
 
-        [KSPField()]
+        [KSPField]
         public bool debugMode;
+
+        [KSPField]
+        public double envelopeVolume;
+
+        [KSPField(isPersistant = true)]
+        public double currentGasVolume;
 
         //The following fields are only shown when debugMode = true
 
@@ -36,7 +51,7 @@ namespace WildBlueIndustries
         public string liftGasResource = "Helium";
 
         [KSPField(guiName = "Lift Gas Density", guiUnits = "m^3", guiFormat = "f3")]
-        protected double liftGasDensity = 0.178; //Helium: kg/m^3
+        protected double liftGasDensity = 0.0000001786; //Helium: metric tons per liter
 
         [KSPField(guiName = "Atm Density", guiUnits = "kg/m^3", guiFormat = "f3")]
         public double atmosphericDensity;
@@ -44,18 +59,13 @@ namespace WildBlueIndustries
         [KSPField(guiName = "Gravity", guiFormat = "f3")]
         double forceOfGravity;
 
-        public float prevLiftMultiplier;
-        WBIModuleStaticLift[] liftModules;
+        public double liftGasDensityKgCubicMeters = 0f;
 
         public override void OnStart(StartState state)
         {
-            PartResourceDefinitionList definitions = PartResourceLibrary.Instance.resourceDefinitions;
-            PartResourceDefinition definition;
             base.OnStart(state);
 
-            definition = definitions[liftGasResource];
-            if (definition != null)
-                liftGasDensity = definition.density * 1000000; //units * 1000000 = kg/m^3
+            liftGasDensityKgCubicMeters = liftGasDensity * 1000000;
 
             //fields shown when debugMode = true
             Fields["liftGasResource"].guiActive = debugMode;
@@ -63,13 +73,6 @@ namespace WildBlueIndustries
             Fields["forceOfGravity"].guiActive = debugMode;
             Fields["atmosphericDensity"].guiActive = debugMode;
             Fields["liftMultiplier"].guiActive = debugMode;
-
-            List<WBIModuleStaticLift> lifters = this.part.vessel.FindPartModulesImplementing<WBIModuleStaticLift>();
-            lifters.Remove(this);
-            if (lifters.Count > 0)
-                liftModules = lifters.ToArray();
-
-            prevLiftMultiplier = liftMultiplier;
         }
 
         public void FixedUpdate()
@@ -82,33 +85,13 @@ namespace WildBlueIndustries
             atmosphericDensity = FlightGlobals.getAtmDensity(FlightGlobals.getStaticPressure(), FlightGlobals.getExternalTemperature());
 
             //Lift force = (atmospheric density - lifting gas density) * g * (units of lifting gas / 1000), in Newtons
-            liftForce = (atmosphericDensity - liftGasDensity) * forceOfGravity * (liftGasAmount / 1000);
+            liftForce = (atmosphericDensity - liftGasDensityKgCubicMeters) * forceOfGravity * (liftGasAmount / 1000);
             if (liftMultiplier > 0.001)
                 liftForce = liftForce * (1.0 + liftMultiplier);
             liftForce = liftForce / 1000; //kN
 
-            //Apply lift force
-            this.part.AddForceAtPosition(liftVector * (float)liftForce, this.part.WCoM);
-        }
-
-        public override void OnUpdate()
-        {
-            base.OnUpdate();
-            if (debugMode == false)
-                return;
-            WBIModuleStaticLift lifter;
-
-            if (liftMultiplier != prevLiftMultiplier)
-            {
-                prevLiftMultiplier = liftMultiplier;
-
-                for (int index = 0; index < liftModules.Length; index++)
-                {
-                    lifter = liftModules[index];
-                    lifter.prevLiftMultiplier = liftMultiplier;
-                    lifter.liftMultiplier = liftMultiplier;
-                }
-            }
+            //Apply lift force. We'll be nice and center at vessel CoM.
+            this.part.AddForceAtPosition(liftVector * (float)liftForce, this.part.vessel.CoM);
         }
     }
 }
