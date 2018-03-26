@@ -6,6 +6,138 @@ A KSP mod that provides common functionality for mods by Wild Blue Industries.
 
 Copy the contents of the mod's GameData directory into your GameData folder.
 
+1.50
+- Recompiled for KSP 1.4.1
+- Gave ElectroPlasma a small amount of density.
+- Fixed an edge case where WBIProspector would generate an NRE.
+- WBIModuleScienceExperiment can now check for proximity to an anomaly as a requirement.
+- New experiment result: WBIUnlockTechResult - You can use this experiment result to flag one or more parts as experimental. Just like with a part test contract, an experimental part can be used even if its tech node is unlocked.
+- Added new Breakthrough Research contract. It makes use of the WBIUnlockTechResult module described above.
+- New WBIModuleAsteroidResource allows you to guarantee that a resource will be available if the asteroid is a magic boulder.
+- New WBIToolTipManager can read PART_TIP config nodes and provide tips to players. It's an alternate way to teach players how to use specific parts and handy for those who don't read the KSPedia, part descriptions, or wiki pages.
+- Many updates for Classic Stock play mode - thanks JadeOfMarr! :)
+
+Refinery
+
+The Refinery is an new app available at the space center and in flight. It lets you produce and/or store resources in limited amounts. Such resources could be rare and not readily available for purchase. In fact, if you try to launch a craft with Refinery resources, those resources will be cleared before pre-launch. Once you launch the craft, you can purchase the Refinery resource, and when you recover the craft, its Refinery resources will be stored in the Refinery up to its maximum capacity.
+
+Refinery nodes specify resources that are produced and/or stored in the Refinery.
+You can specify one or more Refinery nodes with the same resource. Each node will become a production tier and appear in the order that you list them in the config file. Below is an example.
+
+//New tiers appear in the same order as these nodes appear in the config file.
+REFINERY
+{
+	resourceName = Graviolium
+
+	//Optional tech node required to unlock the tier.
+	techRequired = wbiSaucerTechnologies
+
+	//How many units per day of the resource to produce
+	//Set to 0 if you want to just store the resource and not produce it.
+	unitsPerDay = 10
+
+	//Multiplied by the resource's unit cost to determine the cost to produce a unit of the resource.
+	unitCostMultiplier = 1.75
+
+	//Maximum number of units that can be stored at the Refinery.
+	maxAmount = 50000
+
+	//The cost to unlock the production tier
+	unlockCost = 250000
+}
+
+1.40
+- Streamlined the WBIModuleResourceConverter
+- WBIProspector now supports one or more harvest types.
+- WBIProspector can now prospect resources from the atmosphere, exosphere, ocean, and planet.
+
+1.31.2
+- Bug Fixes
+
+1.39.1
+- Cruise Control fix for single-mode engines. They still need ModuleEnginesFX though.
+- Fix for deprecated parts.
+- ModuleManager update.
+
+1.39
+
+New Props
+- Disco Ball: With spinning lights!
+- Dance Floor: Animated dance floor!
+- Jukebox: Actually plays music! Music files must be in the .ogg format and go in the 000WildBlueTools/Music folder.
+
+ARP Icons
+Added new Alternate Resource Panel icons courtesy of JadeOfMaar. These look great! :)
+
+Bug Fixes And Enhancements
+- Fixed missing resource requirements when templates require multiple resources.
+- Inflatable parts can now be inflated only once.
+- Added new WBICruiseControl part module. WBICruiseControl must be placed after your engine part module and multimode switch modules. It enables you to conduct engine burns during timewarp. NOTE: Heat mechanics don't work during cruise control, this is a known limitation. To use cruise control, be sure to set the desired throttle in the context menu, and set the fuel reserve percentage. Finally turn on Cruise Control. Then engage timewarp. Note that KSP doesn't allow you to adjust the controls in the context menu during timewarp, that's a game limitation.
+
+
+1.38
+- Bug fixes.
+
+1.37
+- Fixed missing resource icons.
+
+1.36
+- Far Future Technologies support: NuclearSaltWater used in place of Explodium.
+- The Docking port helper now supports docking ports making use of WBILight. Hence, ports light up and you can set the color on the light.
+
+1.35
+- When dumping resources, any resources that are locked won't be dumped.
+- Added resource distribution to the Buckboard 6000.
+- WBISelfDestruct now supports explosions when staged.
+
+1.31
+- The S.A.F.E.R. fuel supply will last up to 10.86 years of continuous output.
+- Fix for parts not remembering what template they're using.
+- Blutonium and NuclearFuel are now Flow Mode all vessel. Reactors that use them are still restricted to resources in the part itself.
+- Added NuclearWaste resource for Classic Stock.
+- The S.A.F.E.R. now produces NuclearWaste as part of its outputs. With Pathfinder installed, it can be reprocessed into NuclearFuel.
+
+1.28
+- KIS storage volumes now properly calculated.
+- Code cleanup
+- Play Mode selection moved from Pathfinder to Wild Blue Tools.
+- Added new Classic Stock play mode.
+- CRP is now a separate download.
+
+1.26
+- BARIS is now an optional download as originally intended- just took awhile for me to figure out how to make that work. DO NOT DELETE the 000ABARISBridgeDoNotDelete FOLDER! That plugin is the bridge between this mod and BARIS.
+- Recalibrated templates for Cryo Engines and added cryo tank cooling to LiquidHydrogen storage.
+
+1.25
+- BARIS update. 
+
+1.23
+- NRE fixes.
+
+1.20
+- Recompiled for KSP 1.3.
+- Possible click-through fix.
+
+1.19
+- Minor bug fixes
+
+1.18
+- Experiments can now check the entire vessel via their "checkVesselResources" flag, to see if there are enough resources to complete the experiment.
+
+1.17
+- Added a Tweakscale patch for the plasma screens. Thanks for the patch, Violet_Wyvern!
+- S.A.F.E.R. : The Safe Affordable Fission Engine for Rovers generates ElectricCharge for your spacecraft needs. It is based upon the real-world SAFE - 400 reactor created by NASA.
+
+1.15
+- Restricted the number of contracts that are offered and/or active.
+- Fixed a situation where experiments weren't registering as completed.
+- Contracts won't be offered until you've orbited the target world and have unlocked the proper tech tree.
+
+1.14
+- New WBIEnhancedExperiment PartModule. It brings the enhanced experiment requirements of WBIModuleScienceExperiments to science parts that don't need to be loaded into an experiment lab.
+- Science system now generates research contracts.
+- Bug fixes
+
 1.12.0
 - Bug Fixes
 
@@ -199,6 +331,10 @@ Science System
 - Adjusted Ore and XenonGas capacities to reflect stock resource volumes.
 
 ---LICENSE---
+Some resource definitions courtesy of Community Resource Pack. License: CC-BY-NC-SA 4.0
+
+Refinery icon by Goran tek-en License: CC-BY-NC-SA 4.0
+
 Art Assets, including .mu, .mbm, and .dds files are copyright 2014-2016 by Michael Billard, All Rights Reserved.
 
 Wild Blue Industries is trademarked by Michael Billard. All rights reserved.

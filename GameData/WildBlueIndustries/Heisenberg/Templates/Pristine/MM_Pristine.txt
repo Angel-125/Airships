@@ -1,0 +1,22 @@
+@PART[hl10Small2,hl10Medium2,hl10Large2,WBI_StorageTank2u,WBI_StorageTank1u,WBI_StorageTank,hl10HangarDeck2,hl10HalfFlightDeck,hl10TopFlightDeck]
+{
+	!MODULE[WBIConvertibleStorage]{}
+}
+
+@PART[WBI_GondoLab2]:HAS[@MODULE[WBIConvertibleMPL]]
+{
+	!MODULE[WBIConvertibleMPL]{}
+}
+@PART[WBI_GondoLab2]:HAS[@MODULE[WBIMultipurposeLab]]
+{
+	!MODULE[WBIMultipurposeLab]{}
+}
+
+@PART[WBI_GondoHab2,WBI_GondoOffice]:HAS[@MODULE[WBIMultiConverter]]
+{
+	!MODULE[WBIMultiConverter]{}
+}
+@PART[WBI_GondoHab2,WBI_GondoOffic]:HAS[@MODULE[WBIMultipurposeHab]]
+{
+	!MODULE[WBIMultipurposeHab]{}
+}
