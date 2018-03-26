@@ -9,7 +9,7 @@ Requires Hooligan Labs Airships by JewelShisen
 Copy the contents of the mod's GameData directory into your KSP's GameData folder.
 NOTE: You can find the following sub-folders in the Parts folder:
 
-Engine: The Cyclone engine
+Engine: Engines used by airships.
 FlightDeckSystem: The flight deck parts
 Gondola: The Bison Gondola System
 Structural: A custom version of the stock hollow tube.
@@ -18,6 +18,165 @@ Wheel: A custom version of the stock TR-2L.
 If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
+
+2.10
+- Recompiled for KSP 1.4.1
+- Removed deprecated parts.
+
+2.9.3
+- Fixed issues with the gyro rings.
+
+2.9.2
+- WBT update
+
+2.9.1
+- WBT update
+- Module Manager update
+
+2.9.0
+- WBT Update
+
+ARP Icons
+Added new Alternate Resource Panel icons courtesy of JadeOfMaar. These look great! :)
+
+2.8.9
+- TAC-LS balancing- thanks Space Kadet! :)
+- Fixed missing resource icons
+- WBT Update
+
+2.8.8
+- Fixed missing power requirements for the Gondo Drill.
+- Hid deprecated version of the Cyclone engine.
+- WBT update
+
+2.8.7.1
+- Fix for HL-10 Gyro Ring compressor not producing Compressed Atmosphere.
+
+2.8.7
+- Fixed KIS isues with flight deck inventory storage.
+- Sound fixes for flight deck parts.
+- WBT update
+
+2.8.6
+- All configurable parts now require an Engineer to reconfigure instead of a mix of Engineer and Scientist.
+- Fixed issues with CompressedAir RCS thrusters that resulted from the latest CRP update.
+- Play mode support added.
+- CRP is now a separate download.
+- Added support for Classic Stock play mode and Pristine mode.
+- Updated to KSP 1.3.1.
+
+2.8.5
+- BARIS is now an optional download as originally intended- just took awhile for me to figure out how to make that work. DO NOT DELETE the 000ABARISBridgeDoNotDelete FOLDER! That plugin is the bridge between this mod and BARIS.
+
+2.8 BARIS
+This update introduces BARIS, a replacement for the stock heat mechanic used on the mod's drills and converters. You can think of BARIS (the name is a nod to Buzz Aldrin's Race Into Space) as a highly customizable Dangit-lite. Don't want your drills or converters to break? Don't want the hassle of parts wearing out? Do you prefer not to send Equipment up to repair your parts, or to requrire specific skills to repair them? No problem! All that and more are options. As always, It's Your Game, Your Choice.
+
+BARIS IS OFF BY DEFAULT! You'll have to opt-in via the Settings->Difficulty->BARIS tab.
+
+With BARIS, converters and drills now have wear and tear, which is indicated by the part's Quality rating. They're unlikely to break during their normal design life, but they can start to break down after you exceed their design life. If you perform maintenance on them, you can reduce the chance that they'll break. A broken drill or base part won't function, which can be either annoying or life threatening depending upon the mods you have installed. Once you fix the part, it will continue to function, but its design life will be reduced- unless you disable that option.
+
+Bug Fixes & Enhancements
+- Bug fixes in Kerbal Actuators and animation improvemts - thanks Nertea! :)
+- Fixed missing textures.
+
+2.7.2
+- Long Beach carrier included in sample craft.
+
+2.7.1
+- Fixed NRE issues.
+
+2.7.0 Nuclear Option
+
+This release fulfills my initial vision for the mod; an airship with electric motors and a nuclear reactor for flying on other planets! It also makes it possible to create really big airships with huge hangar bays.
+
+NOTE: The Cyclone no longer requires Firespitter. You will find two versions of it in the catalog. One is marked (DEPRECATED). BE SURE TO UPDATE YOUR VAB/SPH CRAFT WITH THE NEW VERSION! It's the one without (DEPRECATED) in its title. Next release the (DEPRECATED) Cyclone won't be available in the catalog, but won't break any craft in the field.
+
+New Parts
+- Half-Side Flight Deck: one side is omitted to enable the creation of large hangar decks.
+- Half-Side Aircraft Elevator: one side is omitted to enable the creation of large hangar decks.
+- Top-Side Flight Deck: both sides are omitted to enable the creation of large hangar decks.
+- GTG-250-H: This part is a gas turbine generator that produces up to 250 EC/sec. Its output is controlled by the throttle setting. If the Buffalo mod is installed, then this part is automatically deprecated and unavailable to new vessels; there is an equivalent in the Buffalo mod.
+- Nuclear Gyro Ring: Combine the current gyro ring with a nuclear reactor capable of generating 1000 EC/sec, and you have the nuclear gyro ring. Just watch out for the sticker shock.
+- WB-50 "Jet Stream" Electric Prop: This Size 2 (2.5m) stack-mounted electric propeller produces huge amounts of thrust- and needs huge amounts of ElectricCharge as well.
+- WB-25 "Twister" Electric Prop: This is a smaller Size 1 (1.25m) stack-mounted electric propeller.
+
+Bug Fixes & Enhancements
+- The HL10 Side Elevator has new mesh options: Twin Elevator Railings, Left Rail, and Right Rail. For these options, the back wall of the elevator is omitted; great for making large hangars.
+- Increased power output on the Gyro Ring.
+- The Cyclone no longer depends upon Firespitter. NOTE: the Firespitter version of the Cyclone is still included, but only if you have Firespitter installed. It is marked (DEPRECATED). BE SURE TO REBUILD YOUR VAB/SPH CRAFT WITH THE NEW VERSION!
+- Fixed issues with forward/reverse thrust on the ducted fan.
+- Fixed issues with the HL-10 Gyro Ring not producing ElectricCharge.
+
+2.6.1
+- Recompiled Kerbal Actuators.
+
+2.6.0
+- Recompiled plugin for KSP 1.3.
+- Increased KIS storage in the airship hulls.
+- You can convert Equipment into MaterialKits in the Workshop.
+- The WB-22 "Typhoon" can be upgraded to increase thrust.
+- The GTG-125 Gas Turbine Generator can be upgraded to increase ElectricCharge output.
+- Updated Snacks support.
+
+2.5.0
+
+New Part
+Cargo Gondola Type 2: This gondola component has gull-wing doors instead of slide-out doors, and it lacks a cargo ramp.
+
+Bug Fixes & Enhancements
+- Gondola Storage Units can now participate in Pathfinder's resource distribution.
+- Fixed Crash To Desktop issues experienced at startup that are associated with Kerbal Actuators.
+- Revised Kerbal Actuators GUI.
+
+2.4.2
+- Gondola Storage Units now all have both internal and external KIS inventory access.
+- The GondoLab and GondoHab now have 800-liters of KIS storage regardless of configuration.
+- Removed experimental WBINodeStripper; it was causing KAS issues.
+- Recompiled Kerbal Actuators.
+
+2.4.1
+- Minor update to consolidate RPM/ASET ModuleManager patches into one file.
+- VTOL Manager has improved hover management during low framerate conditions.
+- Fix for IVA screens not remembering what image they were displaying.
+- GondoLab has all of its templates again.
+
+2.4.0
+New Parts
+- GondoBalcony: This part is handy for preventing kerbals from opening the door on Bison office buildings, stepping outside, and experiencing a sudden stop at the end. You can toggle the central railing to extend the balcony.
+- Construction Pad: Designed for the roof of a Bison module, the Construction Pad provides a landing spot for your aircraft. With ExtraplanetaryLaunchpads installed, it also doubles as a launchpad for new vessel construction.
+- Pad Extension: Also designed for the roof of a Bison module, this pad extension makes your landing pads larger.
+
+Bug Fixes & Enhancements
+- WBT Update
+- The GondoHab, GondoLab, and GondoGarden can now be broken down for easy transport and set up as office buildings, just like the GondOffice. The new ability is only available to new constructions.
+- Fixed the VAB/SPH part icon for the GondOffice.
+- The GondOffice's conference phone can now change the internal light color from white, blue, and off.
+- Fixed IVA overlay positioning of the GondOffice.
+
+2.3.0
+New Parts
+- WB-12 "Tornado": This 50kn ducted fan runs on 50 ElectricCharge per second- conveniently the same amount produced by the big solar panel... It can tilt up and down to aid in airship operations.
+
+- S.A.F.E.R. : The Safe Affordable Fission Engine with Radiators generates ElectricCharge for your spacecraft needs. It is based upon the real-world SAFE - 400 reactor created by NASA.
+
+- GondOffice: This alternate habitat module serves as a briefing room for your vessels- or as a transportable office space for the executive on the go. It can be disassembled into a storage box and transported by a kerbal (NOTE: there is a KIS bug where it requires several kerbals to pull an item out of storage). Once assembled, you can give it straight sidings to make it more building-like, and you can connect offices together to make a large building. If this works out, I'll modify the other bison modules (hab, lab, & greenhouse) with similar functionality.
+HINT: Click the top of the conference phone to turn on/off the lights.
+
+- GondoStairs: These external stairs give you access to the upper floors of your buildings. Just unpack them and attach them to the end of a Bison module.
+
+Sample Craft
+- Added the KV-8 Kestrel, a nuclear-powered tilt-fan aircraft. BE SURE TO WARM UP THE REACTOR BEFORE TAKING OFF!
+
+Bug Fixes & Enhancements
+- Added name tag to the HL-10 rudder; it is in the same place as the mission flag, and upside down relative to the mission flag.
+- Updated TAC-LS greenhouse configuration for continual food production.
+
+2.2.6
+- WBT update
+
+2.2.5
+- WBT update
+- Added new solar panels, available when Large Electrics is unlocked.
 
 2.2.4
 - Fixed duplicated airship hulls issue.
@@ -151,11 +310,9 @@ Bug Fixes & Enhancements
 
 Module Manager by Sarbian
 Cyclone engine by blackheart612 and is distributed under the CC-BY-NC-SA 3.0 license.
-Firespitter by Snjo.
 
 ---LICENSE---
-Art Assets, including .mu, .mbm, and .dds files but excluding the Cyclone engine are copyright 2014-2016 by Michael Billard, All Rights Reserved.
-Cyclone by blackheart612 is distributed under the CC-BY-NC-SA 3.0 license.
+Art Assets, including .mu, .mbm, and .dds files are copyright 2014-2016 by Michael Billard, All Rights Reserved.
 
 Wild Blue Industries is trademarked by Michael Billard. All Rights Reserved.
 Note that Wild Blue Industries is a ficticious entity 

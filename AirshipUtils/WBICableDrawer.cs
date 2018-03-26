@@ -1,5 +1,5 @@
 ﻿/*
-Source code copyright 2016, by Michael Billard (Angel-125)
+Source code copyright 2018, by Michael Billard (Angel-125)
 License: GPLV3
 
 Wild Blue Industries is trademarked by Michael Billard and may be used for non-commercial purposes. All other rights reserved.
@@ -80,7 +80,6 @@ namespace WildBlueIndustries
             lineRenderer = cable.AddComponent<LineRenderer>();
             lineRenderer.useWorldSpace = false;
             lineRenderer.material = mat;
-//            lineRenderer.SetColors(rgbToColor(50f, 50f, 50f), rgbToColor(50f, 50f, 50f));
             lineRenderer.SetColors(cableColor, cableColor);
             lineRenderer.SetWidth(cableWidth, cableWidth);
             lineRenderer.SetVertexCount(2);
