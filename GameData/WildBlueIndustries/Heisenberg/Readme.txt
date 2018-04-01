@@ -19,6 +19,21 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.11.0
+
+New Parts
+- Konstruction Krane (Advanced Construction): The Konstruction krane is helpful for picking stuff up on the ground and placing them were you want.
+- WB-51 "Monsoon" Ducted Fan (Advanced Aerodynamics): This ducted fan combines the power of the WB-50 "Jet Stream" with the rotation ability of the WB-21 "Tornado" ducted fan.
+- WB-52 "Thunderstorm" Ducted Fan (Advanced Aerodynamics): An immense ducted fan best suited to flying aircraft carriers, the Thunderstorm generates an enormous amount of thrust and can tilt just like the smaller ducted fans.
+
+Bug Fixes And Enhancements
+- Adjusted atmosphere and velocity curves for the electric propellers and fans- thanks JadeOfMaar! :)
+- Fixed Hooligan Labs' lift issues with the HL-10L Dirigible Section.
+- Increased the Nuclear Gyro power output to 2000 EC/sec and tweaked its thermal parameters.
+- Nuclear Gyro stores 20,000 ElectricCharge instead of 4,500 LiquidFuel.
+- HL-10 Hangar Deck now has a battery template.
+- Increased the WB-50 "Jet Stream" thrust output to 500kn
+
 2.10
 - Recompiled for KSP 1.4.1
 - Removed deprecated parts.
