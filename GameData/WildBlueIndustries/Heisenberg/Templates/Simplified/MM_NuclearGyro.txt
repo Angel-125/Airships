@@ -1,0 +1,13 @@
+@PART[hl10NuclearGyro]
+{
+	MODULE
+	{
+		name = ModuleGenerator
+		isAlwaysActive = true
+		OUTPUT_RESOURCE
+		{
+			name = ElectricCharge
+			rate = 2000
+		}
+	}
+}
