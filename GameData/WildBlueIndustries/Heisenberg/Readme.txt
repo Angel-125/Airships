@@ -19,6 +19,12 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.11.2
+- Optimized meshes for all the electric propellers and fans.
+- Fixed hub wobbling issue on the WB-21 "Tornado"
+- Recompiled plugin.
+- Retested action groups for thrust reverse and verified correct operation.
+
 2.11.0
 
 New Parts
