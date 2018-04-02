@@ -24,7 +24,10 @@ Copy the contents of the mod's GameData directory into your GameData folder.
 
 ---REVISION HISORY---
 
-1.3
+1.3.0.3
+- Minor fixes for reverse-thrust in WBIPropSpinner.
+
+1.3.0.2
 New Actuators
 - WBITranslationController: This part module lets you move mesh transforms around.
 
