@@ -19,6 +19,18 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.12
+New Part
+- Bison Hub (Advanced Exploration: This 4-way hub lets you connect four gondola modules together to form a ground base.
+
+Bug Fixes & Enhancements
+- Recompiled for KSP 1.4.3
+- Improved resource summary in the geology lab.
+- Fixed a situation where resource distribution that wouldn't distribute resources.
+- Adjusted Classic Stock resource densities to reflect the 5-liter standard used by most stock resources.
+- Adjusted Classic Stock storage capacities to reflect the 5-liter standard used by most stock resources. These changes will affect new parts and when you reconfigure an existing part.
+- Classic Stock is now the default Play Mode for new installs of WBI mods. Existing games are unchanged.
+
 2.11.2
 - Optimized meshes for all the electric propellers and fans.
 - Fixed hub wobbling issue on the WB-21 "Tornado"
