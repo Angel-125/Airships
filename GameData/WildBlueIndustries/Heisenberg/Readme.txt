@@ -19,6 +19,13 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.12.5
+- Recompiled for KSP 1.4.4
+- Updated support for Extraplanetary Launchpads.
+
+2.12.4
+- WBT and Classic Stock resources update.
+
 2.12.3
 - WBT and BARIS bridge update.
 
