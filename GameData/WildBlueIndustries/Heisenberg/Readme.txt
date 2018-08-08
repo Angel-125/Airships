@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.12.6
+- WildBlueTools update.
+
 2.12.5
 - Recompiled for KSP 1.4.4
 - Updated support for Extraplanetary Launchpads.
