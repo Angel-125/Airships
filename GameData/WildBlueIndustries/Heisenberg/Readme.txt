@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.12.7
+- Bug fixes for experiments and OmniConverters
+
 2.12.6
 - WildBlueTools update.
 
