@@ -19,6 +19,11 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.12.9
+- The Gas Turbine Generator no longer works underwater.
+- The GondoDrill now produces Slag in addition to whatever resources the biome has if Classic Stock play mode is active.
+- Fixed missing deprecated version of the Cyclone engine. You still can't create new craft with it but older craft in the field will load properly.
+
 2.12.8
 - WBT update.
 - Fixed click-through issues with windows displayed in the editor.
