@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.12.10
+- WBT Update
+
 2.12.9
 - The Gas Turbine Generator no longer works underwater.
 - The GondoDrill now produces Slag in addition to whatever resources the biome has if Classic Stock play mode is active.
