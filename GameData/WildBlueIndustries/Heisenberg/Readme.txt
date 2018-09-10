@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.12.11
+- Fixes Play Mode failing to rename certain files. NOTE: You might need to reset your current play mode. Simply open the WBT app from the Space Center, choose another mode, press OK, and again open the app, selecting your original play mode. Then be sure to restart KSP.
+
 2.12.10
 - WBT Update
 
