@@ -19,6 +19,13 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.13.1
+Last release for KSP 1.4.5!
+
+Bug Fixes & Enhancements
+- Fixed issue where switching Play Modes would cause some files to not be renamed and cause all kinds of fun for players...
+NOTE: For the changes to take effect, you'll need to switch your Play Mode to some mode other than the current one, then switch it to the desired mode.
+
 2.13
 Omni Converters & Storage
 - Added search functions to OmniStorage and OmniConverter GUI.
