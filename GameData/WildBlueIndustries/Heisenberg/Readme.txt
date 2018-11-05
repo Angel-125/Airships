@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.13.2
+- KSP 1.5 update
+
 2.13.1
 Last release for KSP 1.4.5!
 
