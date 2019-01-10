@@ -1,0 +1,72 @@
+PART
+{
+	name = WBI_BisonTruckLink
+	module = Part
+	author = Angel-125
+
+	MODEL
+	{
+		model = WildBlueIndustries/Airships/Parts/Gondola/TrainLink
+	}
+	rescaleFactor = 1
+	node_stack_back = 0, 0, 0, 0, -1, 0, 2
+	node_attach = 0, 0, 0, 0, 1, 0, 2
+
+	TechRequired = actuators
+	entryCost = 5200
+	cost = 450
+	category = Coupling
+	subcategory = 0
+	title = Bison Truck Link
+	manufacturer = Wild Blue Industries
+	description = For those accepting the challenge of lining up their rovers to form trucks, this klaw-inspired link connects your rovers together. Once connected, free the pivot and disable steering on the newly connected rover to make steering easier (the front rover should do the steering). DO NOT BACK UP INTO THE LINK! Instead, the actively controlled rover should have the truck link and make the connection.
+	// attachment rules: stack, srfAttach, allowStack, allowSrfAttach, allowCollision
+	attachRules = 1,1,1,1,0
+
+	// --- standard part parameters ---
+	mass = 0.15
+	dragModelType = default
+	maximum_drag = 0.2
+	minimum_drag = 0.2
+	angularDrag = 2
+	crashTolerance = 20
+	maxTemp = 1900
+	breakingForce = 50
+	breakingTorque = 50
+	bulkheadProfiles = size1, srf
+
+	MODULE
+	{
+		name = ModuleGrappleNode
+		nodeTransformName = FixedGrabber
+		deployAnimationController = 1
+		nodeType = size1
+		captureRange = 0.06
+		captureMinFwdDot = 0.733
+		captureMaxRvel = 1
+	}
+
+	MODULE
+	{
+		name = ModuleAnimateGeneric
+		animationName = Deploy
+		startEventGUIName = Arm
+		endEventGUIName = Disarm
+		actionGUIName = Toggle Arming
+	}
+
+	MODULE
+	{
+		name = FXModuleLookAtConstraint
+		CONSTRAINLOOKFX
+		{
+			rotatorsName = Piston1
+			targetName = Piston2
+		}
+		CONSTRAINLOOKFX
+		{
+			rotatorsName = Piston2
+			targetName = Piston1
+		}
+	}
+}
