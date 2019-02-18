@@ -19,6 +19,11 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.14.2
+- Fixed nodes in the Bison Hub.
+- Fixed GitHub path in the version file.
+- Removed duplicate RocketParts OmniConverter template.
+
 2.14.1
 - Bug fixes
 

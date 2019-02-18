@@ -1,6 +1,6 @@
 {
     "NAME":"Airships",
-    "URL":"https://raw.githubusercontent.com/Angel-125/Airships/master/GameData/WildBlueIndustries/Heisenberg/Airships.version",
+    "URL":"https://raw.githubusercontent.com/Angel-125/Airships/master/GameData/WildBlueIndustries/Heisenberg/Airships/Airships.version",
     "DOWNLOAD":"https://github.com/Angel-125/Airships/releases",
     "GITHUB":
     {
@@ -12,7 +12,7 @@
     {
 	"MAJOR":2,
 	"MINOR":14,
-	"PATCH":1,
+	"PATCH":2,
 	"BUILD":0
     },
      "KSP_VERSION_MIN":{
