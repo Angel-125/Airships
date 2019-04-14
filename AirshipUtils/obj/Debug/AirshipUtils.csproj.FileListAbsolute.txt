@@ -15,10 +15,11 @@ C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\WildBlueTools
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\KSPTrackIR.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\Mono.Cecil.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\TDx.TDxInput.dll
-C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\Mono.Security.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\BARISBridge.pdb
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\WildBlueTools.pdb
-C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.xml
-C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.csprojResolveAssemblyReference.cache
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.csprojAssemblyReference.cache
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.csproj.CoreCompileInputs.cache
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.csproj.CopyComplete
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.pdb
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\Ionic.Zip.dll

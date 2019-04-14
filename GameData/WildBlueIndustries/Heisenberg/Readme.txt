@@ -19,6 +19,118 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.14.2
+- Fixed nodes in the Bison Hub.
+- Fixed GitHub path in the version file.
+- Removed duplicate RocketParts OmniConverter template.
+
+2.14.1
+- Bug fixes
+
+2.14
+- Recompiled for KSP 1.6
+- Bug fixes.
+
+2.13.3
+- Removed duplicate Play Mode patches.
+
+2.13.2
+- KSP 1.5 update
+
+2.13.1
+Last release for KSP 1.4.5!
+
+Bug Fixes & Enhancements
+- Fixed issue where switching Play Modes would cause some files to not be renamed and cause all kinds of fun for players...
+NOTE: For the changes to take effect, you'll need to switch your Play Mode to some mode other than the current one, then switch it to the desired mode.
+
+2.13
+Omni Converters & Storage
+- Added search functions to OmniStorage and OmniConverter GUI.
+- Play Mode now lists which mods support a particular mode.
+
+Classic Stock
+- Added new Classic Stock omni converters: Propellium Distiller, Oxium Distiller, Snack Grinder (requres Snacks), Soil Dehydrator (requires Snacks).
+- Gondo Hab, Gondo Lab, and Gondo Office all default to Omni templates.
+
+2.12.11
+- Fixes Play Mode failing to rename certain files. NOTE: You might need to reset your current play mode. Simply open the WBT app from the Space Center, choose another mode, press OK, and again open the app, selecting your original play mode. Then be sure to restart KSP.
+
+2.12.10
+- WBT Update
+
+2.12.9
+- The Gas Turbine Generator no longer works underwater.
+- The GondoDrill now produces Slag in addition to whatever resources the biome has if Classic Stock play mode is active.
+- Fixed missing deprecated version of the Cyclone engine. You still can't create new craft with it but older craft in the field will load properly.
+
+2.12.8
+- WBT update.
+- Fixed click-through issues with windows displayed in the editor.
+
+2.12.7
+- Bug fixes for experiments and OmniConverters
+
+2.12.6
+- WildBlueTools update.
+
+2.12.5
+- Recompiled for KSP 1.4.4
+- Updated support for Extraplanetary Launchpads.
+
+2.12.4
+- WBT and Classic Stock resources update.
+
+2.12.3
+- WBT and BARIS bridge update.
+
+2.12
+New Part
+- Bison Hub (Advanced Exploration: This 4-way hub lets you connect four gondola modules together to form a ground base.
+
+Bug Fixes & Enhancements
+- Recompiled for KSP 1.4.3
+- Improved resource summary in the geology lab.
+- Fixed a situation where resource distribution that wouldn't distribute resources.
+- Adjusted Classic Stock resource densities to reflect the 5-liter standard used by most stock resources.
+- Adjusted Classic Stock storage capacities to reflect the 5-liter standard used by most stock resources. These changes will affect new parts and when you reconfigure an existing part.
+- Classic Stock is now the default Play Mode for new installs of WBI mods. Existing games are unchanged.
+
+2.11.2
+- Optimized meshes for all the electric propellers and fans.
+- Fixed hub wobbling issue on the WB-21 "Tornado"
+- Recompiled plugin.
+- Retested action groups for thrust reverse and verified correct operation.
+
+2.11.0
+
+New Parts
+- Konstruction Krane (Advanced Construction): The Konstruction krane is helpful for picking stuff up on the ground and placing them were you want.
+- WB-51 "Monsoon" Ducted Fan (Advanced Aerodynamics): This ducted fan combines the power of the WB-50 "Jet Stream" with the rotation ability of the WB-21 "Tornado" ducted fan.
+- WB-52 "Thunderstorm" Ducted Fan (Advanced Aerodynamics): An immense ducted fan best suited to flying aircraft carriers, the Thunderstorm generates an enormous amount of thrust and can tilt just like the smaller ducted fans.
+
+Bug Fixes And Enhancements
+- Adjusted atmosphere and velocity curves for the electric propellers and fans- thanks JadeOfMaar! :)
+- Fixed Hooligan Labs' lift issues with the HL-10L Dirigible Section.
+- Increased the Nuclear Gyro power output to 2000 EC/sec and tweaked its thermal parameters.
+- Nuclear Gyro stores 20,000 ElectricCharge instead of 4,500 LiquidFuel.
+- HL-10 Hangar Deck now has a battery template.
+- Increased the WB-50 "Jet Stream" thrust output to 500kn
+
+2.10
+- Recompiled for KSP 1.4.1
+- Removed deprecated parts.
+
+2.9.3
+- Fixed issues with the gyro rings.
+
+2.9.2
+- WBT update
+
+2.9.1
+- WBT update
+- Module Manager update
+
 2.9.0
 - WBT Update
 

@@ -1,0 +1,3 @@
+- Fixed nodes in the Bison Hub.
+- Fixed GitHub path in the version file.
+- Removed duplicate RocketParts OmniConverter template.

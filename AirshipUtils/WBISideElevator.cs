@@ -62,7 +62,7 @@ namespace WildBlueIndustries
             //Lower the elevator
             elevatorSequencer.Add(SideElevatorSequences.Lower);
             elevatorSequencer.Add(SideElevatorSequences.Done);
-            updateGUI();
+            UpdateGUI();
             playAnimation();
         }
 
@@ -87,7 +87,7 @@ namespace WildBlueIndustries
             //Raise the elevator
             elevatorSequencer.Add(SideElevatorSequences.Raise);
             elevatorSequencer.Add(SideElevatorSequences.Done);
-            updateGUI();
+            UpdateGUI();
             playAnimation();
         }
 
@@ -112,7 +112,7 @@ namespace WildBlueIndustries
             //Unstow the elevator
             elevatorSequencer.Add(SideElevatorSequences.Deploy);
             elevatorSequencer.Add(SideElevatorSequences.Done);
-            updateGUI();
+            UpdateGUI();
             playAnimation();
         }
 
@@ -141,7 +141,7 @@ namespace WildBlueIndustries
             //Stow the elevator
             elevatorSequencer.Add(SideElevatorSequences.Stow);
             elevatorSequencer.Add(SideElevatorSequences.Done);
-            updateGUI();
+            UpdateGUI();
             playAnimation();
         }
 
@@ -168,7 +168,7 @@ namespace WildBlueIndustries
             }
             if (upDownAnimation != null)
                 upDownAnimation.showGui(false);
-            updateGUI();
+            UpdateGUI();
         }
 
         public override void OnUpdate()
@@ -189,7 +189,7 @@ namespace WildBlueIndustries
             switch (sequence)
             {
                 case SideElevatorSequences.Done:
-                    updateGUI();
+                    UpdateGUI();
                     sequenceIndex = -1;
                     break;
 
@@ -220,7 +220,7 @@ namespace WildBlueIndustries
             }
         }
 
-        protected void updateGUI()
+        public void UpdateGUI()
         {
             if (deployStowAnimation == null || upDownAnimation == null)
                 return;

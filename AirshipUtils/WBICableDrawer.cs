@@ -80,7 +80,6 @@ namespace WildBlueIndustries
             lineRenderer = cable.AddComponent<LineRenderer>();
             lineRenderer.useWorldSpace = false;
             lineRenderer.material = mat;
-//            lineRenderer.SetColors(rgbToColor(50f, 50f, 50f), rgbToColor(50f, 50f, 50f));
             lineRenderer.SetColors(cableColor, cableColor);
             lineRenderer.SetWidth(cableWidth, cableWidth);
             lineRenderer.SetVertexCount(2);

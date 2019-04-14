@@ -18,25 +18,25 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 */
 namespace WildBlueIndustries
 {
+    /// <summary>
+    /// This part module provides static lift based upon the lifting gas density and volume.
+    /// Be sure to account for the lifting gas's mass in the part mass.
+    /// </summary>
     public class WBIModuleStaticLift : PartModule
     {
-        [KSPField(guiName = "Lift", guiActive = true, guiUnits = "kN", guiFormat = "f9")]
+        [KSPField(guiActive = true, guiActiveEditor= true, guiName = "Lift", guiUnits = "kN", guiFormat = "n2")]
         public double liftForce;
 
-        [KSPField()]
+        [KSPField]
         public bool debugMode;
 
         //The following fields are only shown when debugMode = true
-
         [KSPField(guiName = "Lift Multiplier", guiFormat = "f3")]
         [UI_FloatRange(stepIncrement = 0.5f, maxValue = 100f, minValue = 0f)]
         public float liftMultiplier;
 
         [KSPField(guiName = "Lift Gas")]
-        public string liftGasResource = "Helium";
-
-        [KSPField(guiName = "Lift Gas Density", guiUnits = "m^3", guiFormat = "f3")]
-        protected double liftGasDensity = 0.178; //Helium: kg/m^3
+        public string liftGasResource = "Phlogiston";
 
         [KSPField(guiName = "Atm Density", guiUnits = "kg/m^3", guiFormat = "f3")]
         public double atmosphericDensity;
@@ -44,70 +44,114 @@ namespace WildBlueIndustries
         [KSPField(guiName = "Gravity", guiFormat = "f3")]
         double forceOfGravity;
 
-        public float prevLiftMultiplier;
-        WBIModuleStaticLift[] liftModules;
+        public double liftGasDensityKgCubicMeters = 0f;
+        protected double liftGasDensity = 0.0000000899; //Phlogiston(hydrogen) metric tons per liter
+        int partCount = -1;
+        List<WBIModuleStaticLift> staticLifters;
 
         public override void OnStart(StartState state)
         {
-            PartResourceDefinitionList definitions = PartResourceLibrary.Instance.resourceDefinitions;
-            PartResourceDefinition definition;
             base.OnStart(state);
 
-            definition = definitions[liftGasResource];
-            if (definition != null)
-                liftGasDensity = definition.density * 1000000; //units * 1000000 = kg/m^3
+            SetupLiftGas();
+
+            if (!HighLogic.LoadedSceneIsFlight)
+                return;
 
             //fields shown when debugMode = true
             Fields["liftGasResource"].guiActive = debugMode;
-            Fields["liftGasDensity"].guiActive = debugMode;
             Fields["forceOfGravity"].guiActive = debugMode;
             Fields["atmosphericDensity"].guiActive = debugMode;
             Fields["liftMultiplier"].guiActive = debugMode;
-
-            List<WBIModuleStaticLift> lifters = this.part.vessel.FindPartModulesImplementing<WBIModuleStaticLift>();
-            lifters.Remove(this);
-            if (lifters.Count > 0)
-                liftModules = lifters.ToArray();
-
-            prevLiftMultiplier = liftMultiplier;
         }
 
         public void FixedUpdate()
         {
-            double liftGasAmount = this.part.Resources[liftGasResource].amount;
-            forceOfGravity = FlightGlobals.ActiveVessel.gravityForPos.magnitude;
-            Vector3d liftVector = (this.part.transform.position - this.vessel.mainBody.position).normalized; //liftVector = (this.part.vessel.CoM - this.vessel.mainBody.position).normalized;
+            if (!HighLogic.LoadedSceneIsFlight)
+            {
+                if (HighLogic.LoadedSceneIsEditor)
+                    CalculateLiftForce();
+                return;
+            }
 
-            //Calculate atmospheric density
-            atmosphericDensity = FlightGlobals.getAtmDensity(FlightGlobals.getStaticPressure(), FlightGlobals.getExternalTemperature());
+            //Update the static lifters.
+            updateStaticLifters();
 
-            //Lift force = (atmospheric density - lifting gas density) * g * (units of lifting gas / 1000), in Newtons
-            liftForce = (atmosphericDensity - liftGasDensity) * forceOfGravity * (liftGasAmount / 1000);
-            if (liftMultiplier > 0.001)
-                liftForce = liftForce * (1.0 + liftMultiplier);
-            liftForce = liftForce / 1000; //kN
+            //Only the first static lifter will create the lift force
+            if (staticLifters[0] != this)
+                return;
 
-            //Apply lift force
-            this.part.AddForceAtPosition(liftVector * (float)liftForce, this.part.WCoM);
+            //Calculate lift force for all the static lifters.
+            double totalLiftForce = 0.0f;
+            int lifterCount = staticLifters.Count;
+            for (int index = 0; index < lifterCount; index++)
+                totalLiftForce += staticLifters[index].CalculateLiftForce();
+
+            //Divide lift force by vessel mass to get acceleration
+            double accelerationForce = totalLiftForce / this.part.vessel.GetTotalMass();
+
+            //Calculate lift vector
+            Vector3d accelerationVector = (this.part.vessel.CoM - this.vessel.mainBody.position).normalized * accelerationForce;
+
+            //Apply lift acceleration
+            int partCount = vessel.parts.Count;
+            Part vesselPart;
+            for (int index = 0; index < partCount; index++)
+            {
+                vesselPart = vessel.parts[index];
+                if (vesselPart.rb != null)
+                {
+                    vesselPart.rb.AddForce(accelerationVector, ForceMode.Acceleration);
+                }
+            }
+//            this.part.AddForceAtPosition(liftVector * (float)liftForce, this.part.vessel.CoM);
         }
 
-        public override void OnUpdate()
+        public virtual void SetupLiftGas()
         {
-            base.OnUpdate();
-            if (debugMode == false)
-                return;
-            WBIModuleStaticLift lifter;
+            PartResourceDefinition definition = ResourceHelper.DefinitionForResource(liftGasResource);
+            float tonnesPerLiter = definition.density / definition.volume;
 
-            if (liftMultiplier != prevLiftMultiplier)
+            liftGasDensityKgCubicMeters = liftGasDensity * 1000000;
+        }
+
+        public double CalculateLiftForce()
+        {
+            if (!this.part.Resources.Contains(liftGasResource))
+                return -1.0f;
+
+            double liftGasAmount = this.part.Resources[liftGasResource].amount;
+
+            if (HighLogic.LoadedSceneIsFlight)
             {
-                prevLiftMultiplier = liftMultiplier;
+                //Gravity
+                forceOfGravity = this.part.vessel.gravityForPos.magnitude;
 
-                for (int index = 0; index < liftModules.Length; index++)
-                {
-                    lifter = liftModules[index];
-                    lifter.prevLiftMultiplier = liftMultiplier;
-                    lifter.liftMultiplier = liftMultiplier;
-                }
+                //Calculate atmospheric density
+                atmosphericDensity = FlightGlobals.getAtmDensity(FlightGlobals.getStaticPressure(), FlightGlobals.getExternalTemperature());
+            }
+
+            //Editor: Calculate for currently selected body
+
+            //Lift force = (atmospheric density - lifting gas density) * g * (units of lifting gas / 1000), in Newtons
+            liftForce = (atmosphericDensity - liftGasDensityKgCubicMeters) * forceOfGravity * (liftGasAmount / 1000);
+
+            //Factor in lift multiplier
+            if (liftMultiplier > 0.001)
+                liftForce = liftForce * (1.0 + liftMultiplier);
+
+            //Get kilonewtons
+            liftForce = liftForce / 1000; //kN
+
+            return liftForce;
+        }
+
+        protected virtual void updateStaticLifters()
+        {
+            if (partCount != this.part.vessel.parts.Count)
+            {
+                partCount = this.part.vessel.parts.Count;
+                staticLifters = this.part.vessel.FindPartModulesImplementing<WBIModuleStaticLift>();
             }
         }
     }

@@ -6,6 +6,247 @@ A KSP mod that provides common functionality for mods by Wild Blue Industries.
 
 Copy the contents of the mod's GameData directory into your GameData folder.
 
+1.72.0
+- Fixed overchange of Equipment costs for OmniConverter templates.
+- Fixed incorrect display of Equipment costs in the Operations Manager.
+- Fixed duplicate OmniConverter and OmniStorage loadouts that happen when you revert a flight back to the editor and create a new part.
+- Added ARP icons- thanks JadeOfMaar!
+
+1.71.0
+- Fixed duplicate Extraplanetary Launchpad OmniConverter templates.
+- Fixed ability to reconfigure deflated parts.
+- Misc. Bug fixes
+- Moved Pathfinder's GoldStrike to Wild Blue Tools.
+- You can now prospect at any time, but some resources won't be found unless you travel a certain minimum distance (hint: 3km is typical).
+- Sample GOLDSTRIKE config node:
+GOLDSTRIKE
+{
+	resourceName = Aurum
+
+	//Restricts where the resource can be found. Separate multiple types by semicolon. Options: Planetary;Oceanic;Atmospheric;Exospheric. Planetary is default.
+	resourceTypes = Planetary
+
+	//List of planet names, separated by semicolon, where the resource can be found. Default: Any, which means any planet can have the resource.
+	planetsFound = Any
+
+	//List of biome names, separated by semicolon, where the resource can be found. Default: Any, which means any biome can have the resource.
+	biomesFound = Any
+
+	//The minimum distance in kilometers between prospect attempts required in order to include the resource among the possible prospected resources.
+	//Default is 3 kilometers.
+	//Ex: Aurum, Gemstones, and PreciousMetals all require you to travel at least 3 kilometers before they become available. Assume that Blutonium could be found every 5km.
+	//If you only travel 2km before making a prospect attempt, then none of the resources will be found. If you travel 6km, then Aurum, Gemstones, PreciousMetals, and Blutonium
+	//will all be potential candidates for prospecting. You still need to make a successful prospecting check to obtain a node.
+	minProspectDistance = 3
+
+	//Minimum required altitude in order for the resource to be a prospecting candidate. Can be negative for below sea level. Default is a double.MinValue.
+	//minAltitude = 0
+
+	//Maxiumum required altitude in order for the resource to be a prospecting candidate. Can be negative for below sea level. Default is double.MaxValue.
+	//maxAltitude = -1000
+
+	//If near an anomaly, some resources are more likely to occur than others. This parameter indicates how likely the resource will be found near an anomaly.
+	//anomalyChance = 65
+
+	//Minimum units in the lode
+	minAmount = 200
+
+	//Maximum units in the lode
+	maxAmount = 4000
+
+	//Roll well enough, and multiply the lode size by this multiplier
+	motherlodeMultiplier = 1.5
+}
+
+1.70.0
+- Bug fixes
+
+1.7
+- Recompiled for KSP 1.6
+- Bug fixes.
+
+1.61.1
+- Experiments can now require solar orbit to run properly.
+- Removed duplicate Play Mode patches.
+
+1.61
+- Fixed issues with resetting and rerunning science experiments that still claimed to be completed.
+- Fixed issue with science experiments requiring twice as many resources to complete when checkPartResources is set to true.
+- The Breakthrough Research experiment will (at long last!) unlock unresearched tech nodes in the event of a breakthrough.
+- WBIOmniConverter will stop processing if the vessel's ElectricCharge falls below minimumVesselPercentEC. Default is 5.
+- Consolidated the functionality of WBIEnhancedExperiment with WBIModuleScienceExperiment.
+- Removed WBIEnhancedExperiment.
+- Added new ElectricCharge + Rock = Konkrete OmniConverter to Classic Stock. This is similar to the real-world LavaHive regolith melter.
+- Omni converters will automatically shut down if the vessel's Electric Charge falls below 5%.
+- Fixed some issues related to the Operations Manager not showing up properly.
+- Fixed emitters on the Buckboards producing smoke when they shouldn't.
+- Fixed issue where assembling parts with resource costs didn't actually spend the required resources.
+- Fixed issue with heavy parts causing physics and collider problems during assembly.
+
+1.60
+Last release for KSP 1.4.5!
+
+WBIOmniStorage
+- You can now specify a maxAmountMultiplier on individual resources within an OMNIRESOURCECOMBO. Just add the field to a RESOURCE node. It defaults to 1.0. This field will take the final amount of units that a part can hold for the given combo resource and multiply it by maxAmountMultiplier.
+- You now have the ability to decouple resources within a resource combo and adjust their amounts individually.
+
+WBIOmniConverter
+- Converters can now produce one or more resources that are specified by a YIELD_RESOURCE node after a set amount of time has passed. Check out the Greenhouse converter template in Templates/ClassicStock/OmniConverters.cfg for an example.
+- Converters have the option to require a die roll to determine if the resource yield succeeds, fails, critically succeeds, or critically fails. This only applies to resources defined by YIELD_RESOURCE nodes. To enable, set minimumSuccess, criticalSuccess, and criticalFailure to values greater than 0 on an OMNICONVERTER template.
+- Converters can now support background processing (They run even when the vessel is unloaded). USE SPARINGLY! Too much background processing will slow the game down. For performance reasons, converters are run in the background once every six in-game hours. To enable, set enableBackgroundProcessing = true in an OMNICONVERTER template node.
+- Converters now support effects. You can specify a startEffect, stopEffect, and runningEffect.
+
+PROTIP: If you don't specify any templateNodes, then you can still set up an OmniConverter to work like a regular ModuleResourceConverter, but with the extra benefits of playing Effects, timed resource production with optional success checks, and background processing (yes, you can set it at the part module's config node if you don't use omni converter templates).
+
+Classic Stock
+- Added new Greenhouse OmniCoverter template. It's only available if Snacks is installed. It will produce Snacks after 180 hours. There's a chance that the yield will be higher than normal, lower than normal, or fail completely. It also runs in the background.
+- The Haber Process, Composter, Snack Grinder, and Organic Chips Omni Converters will now convert their resources even when the vessel is unloaded and out of physics range.
+
+Bug fixes
+- Fixed issue where switching Play Modes would cause some files to not be renamed and cause all kinds of fun for players...
+
+1.59
+WBIOmniStorage
+- Added new MAX_AMOUNT_MODIFIER node that can be used to increase the storage capacity of a particular resource. See the new OmniStorageModifiers.cfg file located in Templates/Common for details.
+
+Classic Stock
+- Fixed issue with OmniConverters incorrectly displaying "missing" status after changing the recipie.
+- OmniConverters will now properly prepare their conversion recipie after you change what they convert.
+- Fixed OPAL Processor not being able to produce Water when the part lacks the Water resource.
+
+Bug Fixes & Enhancements
+- The Ops Manager will again update its button tabs when you change configurations.
+
+1.58
+
+Omni Converters & Storage
+- Added search functions to OmniStorage and OmniConverter GUI.
+- Play Mode now lists which mods support a particular mode.
+
+Classic Stock
+- Added new Classic Stock omni converters: Propellium Distiller, Oxium Distiller, Snack Grinder (requres Snacks), Soil Dehydrator (requires Snacks).
+
+1.57.5
+- Fixed an issue where drills would generate an NRE upon startup when BARIS isn't installed.
+
+1.57.4
+- Fixed situation where the geology lab could generate a NullReferenceException while performing a biome analysis and the local biome hasn't been unlocked.
+- Fixed an issue where drills would generate an NRE upon startup when BARIS isn't installed.
+- Fixed a situation where drills don't realize that the biome has been unlocked.
+
+1.57.3
+- Fixes Play Mode failing to rename certain files. NOTE: You might need to reset your current play mode. Simply open the WBT app from the Space Center, choose another mode, press OK, and again open the app, selecting your original play mode. Then be sure to restart KSP.
+
+1.57.2
+- Fixes issue in WBIModuleResourceHarvester where, if you don't specify any harvest types with harvestType, the harvester will default back to its singular HarvesterType field.
+- Fix for OmniStorage resources on the restricted list not being added during flight.
+
+1.57
+- On a first-time install of Wild Blue Tools, if you have Community Resource Pack installed then the play mode will default to CRP.
+- Fixed resource collection issues with the WBIModuleResourceHarvester.
+- Ops Manager won't show converter controls in the VAB/SPH.
+- Some OmniConverter templates are now available outside of Classic Stock play mode.
+
+1.56.0
+- ARP icons updates courtesy of JadeOfMaar
+- Updated OmniCoverters and OmniStorage courtesy of JadeOfMaar
+- Duplicate convertible storage items fixed courtesy of JadeOfMaar
+- Vessel can now handle multiple diving computers on the same vessel.
+- New WBIModuleResourceHarvester can harvest all the resources in the biome, and can support multiple harvest types.
+
+1.55.12
+- Bug fixes
+
+1.55.11
+- Bug fixes
+
+1.55.9
+- Un-broke the template managers.
+
+1.55.7
+- Recompiled for KSP 1.4.4
+
+1.55.6
+- Fixes issue where resources were consumed when trying to reconfigure a disassembled module.
+
+1.55.5
+- Fixes to OmniStorage.
+
+1.55.4
+- Bug fixes
+
+1.55.3
+- Bug fixes
+
+1.55.2
+- Bug fixes
+- Classic Stock templates update - thanks JadeOfMaar! :)
+
+1.55.1
+- Bug fixes
+
+1.55
+- Improved resource summary in the geology lab.
+- Fixed NRE issues with the WBIProspector.
+- Classic Stock play mode now provides a new storage template: Omni Storage. This template lets you add and configure any number of resources up to the container's maximum storage volume. The part module that handles the capability is the new WBIOmniStorage.
+- Added the new WBIOmniConverter. It lets you configure individual converters from a set of converter templates. There are a number of pre-defined templates for Classic Stock play mode.
+- Adjusted Classic Stock resource densities to reflect the 5-liter standard used by most stock resources.
+- Adjusted Classic Stock storage capacities to reflect the 5-liter standard used by most stock resources. These changes will affect new parts and when you reconfigure an existing part.
+- Classic Stock is now the default Play Mode for new installs of WBI mods. Existing games are unchanged.
+
+1.50
+- Recompiled for KSP 1.4.1
+- Gave ElectroPlasma a small amount of density.
+- Fixed an edge case where WBIProspector would generate an NRE.
+- WBIModuleScienceExperiment can now check for proximity to an anomaly as a requirement.
+- New experiment result: WBIUnlockTechResult - You can use this experiment result to flag one or more parts as experimental. Just like with a part test contract, an experimental part can be used even if its tech node is unlocked.
+- Added new Breakthrough Research contract. It makes use of the WBIUnlockTechResult module described above.
+- New WBIModuleAsteroidResource allows you to guarantee that a resource will be available if the asteroid is a magic boulder.
+- New WBIToolTipManager can read PART_TIP config nodes and provide tips to players. It's an alternate way to teach players how to use specific parts and handy for those who don't read the KSPedia, part descriptions, or wiki pages.
+- Many updates for Classic Stock play mode - thanks JadeOfMarr! :)
+
+Refinery
+
+The Refinery is an new app available at the space center and in flight. It lets you produce and/or store resources in limited amounts. Such resources could be rare and not readily available for purchase. In fact, if you try to launch a craft with Refinery resources, those resources will be cleared before pre-launch. Once you launch the craft, you can purchase the Refinery resource, and when you recover the craft, its Refinery resources will be stored in the Refinery up to its maximum capacity.
+
+Refinery nodes specify resources that are produced and/or stored in the Refinery.
+You can specify one or more Refinery nodes with the same resource. Each node will become a production tier and appear in the order that you list them in the config file. Below is an example.
+
+//New tiers appear in the same order as these nodes appear in the config file.
+REFINERY
+{
+	resourceName = Graviolium
+
+	//Optional tech node required to unlock the tier.
+	techRequired = wbiSaucerTechnologies
+
+	//How many units per day of the resource to produce
+	//Set to 0 if you want to just store the resource and not produce it.
+	unitsPerDay = 10
+
+	//Multiplied by the resource's unit cost to determine the cost to produce a unit of the resource.
+	unitCostMultiplier = 1.75
+
+	//Maximum number of units that can be stored at the Refinery.
+	maxAmount = 50000
+
+	//The cost to unlock the production tier
+	unlockCost = 250000
+}
+
+1.40
+- Streamlined the WBIModuleResourceConverter
+- WBIProspector now supports one or more harvest types.
+- WBIProspector can now prospect resources from the atmosphere, exosphere, ocean, and planet.
+
+1.31.2
+- Bug Fixes
+
+1.39.1
+- Cruise Control fix for single-mode engines. They still need ModuleEnginesFX though.
+- Fix for deprecated parts.
+- ModuleManager update.
+
 1.39
 
 New Props
@@ -278,6 +519,10 @@ Science System
 - Adjusted Ore and XenonGas capacities to reflect stock resource volumes.
 
 ---LICENSE---
+Some resource definitions courtesy of Community Resource Pack. License: CC-BY-NC-SA 4.0
+
+Refinery icon by Goran tek-en License: CC-BY-NC-SA 4.0
+
 Art Assets, including .mu, .mbm, and .dds files are copyright 2014-2016 by Michael Billard, All Rights Reserved.
 
 Wild Blue Industries is trademarked by Michael Billard. All rights reserved.
