@@ -116,8 +116,8 @@ GONDOLAB:NEEDS[SnackUtils]
 	requiredResource = Equipment
 	requiredAmount = 550
 	reconfigureSkill = ConverterSkill
-	logoPanel = WildBlueIndustries/Airships/Decals/MOLELab
-	glowPanel = WildBlueIndustries/Airships/Decals/MOLELab
+	logoPanel = WildBlueIndustries/000WildBlueTools/Decals/Snacks
+	glowPanel = WildBlueIndustries/000WildBlueTools/Decals/SnacksGlow
 	description = The Snack Lab enables you to produce snacks from ore. MMMM tasty!
 	toolTip = Snacks. From. Ore.
 	toolTipTitle = Your First Snack Lab
