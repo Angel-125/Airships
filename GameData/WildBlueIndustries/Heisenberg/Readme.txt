@@ -19,6 +19,19 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.16.1
+- Fix drill NREs.
+
+2.16.0
+- Added support for Air and Stress from Snacks.
+
+2.15.1
+- Updated Snacks support.
+
+2.15
+- Updated for KSP 1.7
+- Decal updates courtesy of JadeOfMaar
+
 2.14.2
 - Fixed nodes in the Bison Hub.
 - Fixed GitHub path in the version file.
