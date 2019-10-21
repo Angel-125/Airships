@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.17.0
+- Updated to KSP 1.8
+
 2.16.1
 - Fix drill NREs.
 
