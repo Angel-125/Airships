@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.17.1
+- Compatibility update
+
 2.17.0
 - Updated to KSP 1.8
 
