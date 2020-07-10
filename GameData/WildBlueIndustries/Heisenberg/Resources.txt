@@ -1,0 +1,16 @@
+//Lift gas for airships
+//Just renamed hydrogen to avoid name collisions
+//Density: .08988 grams/liter at STP; 0.00000000899 metric tons per unit, where unit volume is 1-liter.
+RESOURCE_DEFINITION
+{
+	name = wbiLiftGas
+	displayName = Lift Gas
+	density = 0.00000000899
+	unitCost = 0.001
+//	hsp = 10
+	flowMode = ALL_VESSEL
+	transfer = PUMP
+	isTweakable = true
+	isVisible = true
+	volume = 1
+}
