@@ -6,7 +6,28 @@ A KSP mod that provides common functionality for mods by Wild Blue Industries.
 
 Copy the contents of the mod's GameData directory into your GameData folder.
 
-x
+1.83.0
+- Bug fixes & KSP 1.12.2 update
+
+1.82.1
+- Bug fixes
+
+1.82.0
+- Add stock inventory support to several parts.
+- Bug fixes for OmniStorage.
+- OmniStorage now supports stock inventory.
+
+1.81.5
+- New WBIModuleColorChanger.
+- ModuleAnimateGenericSFX can now enable/disable part modules in its enabledModules list. Separate names of part modules of using a ";" character. ModuleAnimateGenericSFX needs to go after all the part modules that it enables/disables.
+
+1.81.4
+- Bug fixes
+
+1.81.3
+- Bug fixes
+
+1.81.2
 - Fix WBIOmniConverter yield resources being produced when required conditions weren't met.
 - Fix WBIOmniConverter yield resources being produced immediately after previously unmet requirements were met.
 - Fix WBIOmniConverter yield results not showing all the cycle results after player leaves the vessel for a length of time and returns.
