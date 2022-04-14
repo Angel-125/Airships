@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 using KSP.IO;
+using KSP.Localization;
 
 /*
 Source code copyright 2019, by Michael Billard (Angel-125)
@@ -35,7 +36,7 @@ namespace WildBlueIndustries
     public class WBIModuleStaticLift : PartModule
     {
         #region Fields
-        [KSPField(guiActive = true, guiActiveEditor= true, guiName = "Lift", guiUnits = "kN", guiFormat = "n2")]
+        [KSPField(guiActive = true, guiActiveEditor= true, guiName = "#LOC_HEISENBERG_lift", guiUnits = "kN", guiFormat = "n2", groupStartCollapsed = true, groupName = "airshipControl", groupDisplayName = "#LOC_HEISENBERG_airshipGroupDisplayName")]
         public double liftForce;
 
         [KSPField]
@@ -56,22 +57,16 @@ namespace WildBlueIndustries
         [KSPField(isPersistant = true)]
         public double currentVolume = 0;
 
-        [KSPField(isPersistant = true, guiActive = true, guiName = "Lift Capacity")]
+        [KSPField(isPersistant = true, guiActive = true, guiName = "#LOC_HEISENBERG_liftControlState", groupStartCollapsed = true, groupName = "airshipControl", groupDisplayName = "#LOC_HEISENBERG_airshipGroupDisplayName")]
         public LiftCapacityStates liftCapacityState;
 
         [KSPField]
         public double compressorRate = 0.025;
 
         //The following fields are only shown when debugMode = true
-        [KSPField(guiName = "Lift Multiplier", guiFormat = "f3")]
+        [KSPField(guiName = "Lift Multiplier", guiFormat = "f3", groupStartCollapsed = true, groupName = "airshipControl", groupDisplayName = "#LOC_HEISENBERG_airshipGroupDisplayName")]
         [UI_FloatRange(stepIncrement = 0.5f, maxValue = 300f, minValue = 0f)]
         public float liftMultiplier;
-
-        [KSPField(guiName = "Atm Density", guiUnits = "kg/m^3", guiFormat = "f3")]
-        public double atmosphericDensity;
-
-        [KSPField(guiName = "Gravity", guiFormat = "f3")]
-        double forceOfGravity;
         #endregion
 
         #region Housekeeping
@@ -80,6 +75,8 @@ namespace WildBlueIndustries
 
         int partCount = -1;
         List<WBIModuleStaticLift> staticLifters;
+        protected bool translationKeysActive = false;
+        public float verticalSpeed = 0f;
         #endregion
 
         #region Overrides
@@ -91,8 +88,6 @@ namespace WildBlueIndustries
                 return;
 
             //fields shown when debugMode = true
-            Fields["forceOfGravity"].guiActive = debugMode;
-            Fields["atmosphericDensity"].guiActive = debugMode;
             Fields["liftMultiplier"].guiActive = debugMode;
         }
 
@@ -120,35 +115,20 @@ namespace WildBlueIndustries
                     liftCapacityState = LiftCapacityStates.Maximum;
                 }
             }
-
-            //Apply lift
-            applyPerPartLift();
         }
         #endregion
 
+        #region Actions
+        #endregion
+
         #region API
-        public void IncreaseLiftCapacity()
-        {
-            liftCapacityState = LiftCapacityStates.Increasing;
-        }
-
-        public void DecreaseLiftCapacity()
-        {
-            liftCapacityState = LiftCapacityStates.Decreasing;
-        }
-
-        public void StopLiftCapacityChange()
-        {
-            liftCapacityState = LiftCapacityStates.Stopped;
-        }
-
         public double CalculateLiftForce()
         {
             //Gravity
-            forceOfGravity = this.part.vessel.gravityForPos.magnitude;
+            double forceOfGravity = this.part.vessel.gravityForPos.magnitude;
 
             //Calculate atmospheric density: units are kg/m^3
-            atmosphericDensity = FlightGlobals.getAtmDensity(FlightGlobals.getStaticPressure(), FlightGlobals.getExternalTemperature());
+            double atmosphericDensity = FlightGlobals.getAtmDensity(FlightGlobals.getStaticPressure(), FlightGlobals.getExternalTemperature());
 
             //Buoyancy Force (Newtons) = (atm density - lift gas density)kg/L * (vol of displaced fluid)L * (force of gravity)m/sec^2
             double densityKgPerLiter = (atmosphericDensity - liftGasDensity) / 1000;
@@ -178,18 +158,12 @@ namespace WildBlueIndustries
             Vector3d accelerationVector = (this.part.WCoM - this.vessel.mainBody.position).normalized * liftForce;
 
             //Apply lift acceleration
-            this.part.rb.AddForce(accelerationVector);
+            if (part.rb != null)
+                part.rb.AddForce(accelerationVector);
         }
 
         protected void applyPerVesselLift()
         {
-            //Update the static lifters.
-            if (partCount != this.part.vessel.parts.Count)
-            {
-                partCount = this.part.vessel.parts.Count;
-                staticLifters = this.part.vessel.FindPartModulesImplementing<WBIModuleStaticLift>();
-            }
-
             //Only the first static lifter will create the lift force
             if (staticLifters[0] != this)
                 return;

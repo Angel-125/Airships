@@ -19,6 +19,11 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.18.0
+
+- Added stock inventory support to all HL-10 dirigible parts with KIS inventories.
+- Added power systems rebalance- thanks Chladic! :)
+
 2.17.4
 - KSP 1.12 compatibility update
 

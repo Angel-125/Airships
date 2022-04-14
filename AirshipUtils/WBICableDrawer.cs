@@ -44,6 +44,8 @@ namespace WildBlueIndustries
         public override void OnStart(StartState state)
         {
             base.OnStart(state);
+            if (!HighLogic.LoadedSceneIsFlight)
+                return;
             Material mat = new Material(Shader.Find("Particles/Additive"));
 
             //Get the start and end points
