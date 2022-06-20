@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.19.0
+- Removed BARIS dependency dll.
+
 2.18.0
 
 - Added stock inventory support to all HL-10 dirigible parts with KIS inventories.

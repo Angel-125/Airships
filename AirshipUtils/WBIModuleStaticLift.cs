@@ -122,6 +122,30 @@ namespace WildBlueIndustries
         #endregion
 
         #region API
+        /// <summary>
+        /// Calculates lift force for the given atmospheric density and force of gravity, assuming maximum envelope volume is used.
+        /// </summary>
+        /// <param name="atmosphericDensity">The density of the atmopshere. Units are kg/m^3</param>
+        /// <param name="forceOfGravity">The force of gravity. Units are m/sec^2</param>
+        /// <returns>The lift force in Kilonewtons</returns>
+        public double CalculateLiftForce(double atmosphericDensity, double forceOfGravity)
+        {
+            double liftForce = 0;
+
+            //Buoyancy Force (Newtons) = (atm density - lift gas density)kg/L * (vol of displaced fluid)L * (force of gravity)m/sec^2
+            double densityKgPerLiter = (atmosphericDensity - liftGasDensity) / 1000;
+            liftForce = densityKgPerLiter * envelopeVolume * forceOfGravity;
+
+            //Factor in lift multiplier
+            if (liftMultiplier > 0.001)
+                liftForce = liftForce * (1.0 + liftMultiplier);
+
+            //Get kilonewtons
+            liftForce = liftForce / 1000; //kN
+
+            return liftForce;
+        }
+
         public double CalculateLiftForce()
         {
             //Gravity

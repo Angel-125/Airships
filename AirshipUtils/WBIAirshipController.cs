@@ -21,6 +21,12 @@ namespace WildBlueIndustries
 {
     public class WBIAirshipController: PartModule
     {
+        public struct TemperaturePressureItem
+        {
+            public double temperature;
+            public double pressure;
+        }
+
         #region Fields
         [KSPField]
         public bool debugMode = true;
@@ -51,6 +57,9 @@ namespace WildBlueIndustries
         List<WBIAirshipController> airshipControllers;
         int partCount = 0;
         bool isLiftingOff = false;
+        List<double> atmosphericDensityTable = null;
+        List<double> liftForceTable = null;
+        CelestialBody celestialBody = null;
         #endregion
 
         #region Overrides
@@ -75,25 +84,27 @@ namespace WildBlueIndustries
             if (!HighLogic.LoadedSceneIsFlight)
                 return;
 
-            atmosphericDensity = FlightGlobals.getAtmDensity(FlightGlobals.getStaticPressure(), FlightGlobals.getExternalTemperature());
-            forceOfGravity = this.part.vessel.gravityForPos.magnitude;
-
-            // Update modules
+            // Update modules and tables
             if (partCount != part.vessel.parts.Count)
             {
+                partCount = part.vessel.parts.Count;
                 airshipControllers = part.vessel.FindPartModulesImplementing<WBIAirshipController>();
                 liftModules = part.vessel.FindPartModulesImplementing<WBIModuleStaticLift>();
+
+                // Build our lift force table.
+                buildLiftForceTable(part.vessel.mainBody, part.vessel.mainBody.GeeASL);
             }
 
             // Only the first airship controller handles the control logic.
             if (airshipControllers[0] != this)
                 return;
 
-            // Get total lift force in Kn
-            totalLiftForce = GetTotalLiftForce();
+            // Get max operating altitude
+            double maxAltitude = CalculateMaxAltitude(part.vessel.mainBody);
 
-            // Get vertical acceleration
-            verticalAcceleration = totalLiftForce / part.vessel.GetTotalMass();
+            // If we're going up, and we're within 1km of max altitude, then slow our ascent until we reach max altitude.
+
+            //
 
             // Stop expanding the envelopes if our vertical acceleration meets or exceeds our desired maximum.
             if (verticalAcceleration - forceOfGravity >= maxVerticalSpeed)
@@ -148,6 +159,38 @@ namespace WildBlueIndustries
         #endregion
 
         #region API
+        public double CalculateMaxAltitude(CelestialBody body)
+        {
+            // if the body has no atmosphere, then we're not going anywhere
+            if (!body.atmosphere)
+                return 0;
+
+            double totalMass = part.vessel.GetTotalMass();
+            double liftForce = 0;
+            double liftAcceleration = 0;
+            int count = liftForceTable.Count;
+            double maxAltitude = 0;
+
+            // Go through each entry in the lift force table, calculate the lift acceleration based on vessel mass, and when we find a value that matches the body's gee force, we've
+            // found max altitude.
+            for (int altitudeIndex = 0; altitudeIndex < count; altitudeIndex++)
+            {
+                // Calculate lift acceleration from lift force
+                liftForce = liftForceTable[altitudeIndex];
+                liftAcceleration = liftForce / totalMass;
+
+                // If lift acceleration matches the body's gravity, then we've found max altitude.
+                if (liftAcceleration < body.GeeASL)
+                {
+                    totalLiftForce = liftForce;
+                    maxAltitude = altitudeIndex * 1000f;
+                    break;
+                }
+            }
+
+            return maxAltitude;
+        }
+
         public double GetTotalLiftForce()
         {
             int count = liftModules.Count;
@@ -155,6 +198,18 @@ namespace WildBlueIndustries
             for (int index = 0; index < count; index++)
             {
                 liftForce += liftModules[index].CalculateLiftForce();
+            }
+
+            return liftForce;
+        }
+
+        public double GetTotalLiftForce(double atmosphericDensity, double forceOfGravity)
+        {
+            int count = liftModules.Count;
+            double liftForce = 0;
+            for (int index = 0; index < count; index++)
+            {
+                liftForce += liftModules[index].CalculateLiftForce(atmosphericDensity, forceOfGravity);
             }
 
             return liftForce;
@@ -219,6 +274,29 @@ namespace WildBlueIndustries
         #endregion
 
         #region Helpers
+        List<double> buildLiftForceTable(CelestialBody body, double forceOfGravity)
+        {
+            liftForceTable = new List<double>();
+
+            int currentIteration = 0;
+            double altitude = 0;
+            double atmopshericDensity = 0;
+            double liftForce = 0;
+
+            while (altitude < body.atmosphereDepth && currentIteration < 1000)
+            {
+                atmopshericDensity = FlightGlobals.getAtmDensity(FlightGlobals.getStaticPressure(altitude, body), FlightGlobals.getExternalTemperature(altitude, body));
+                liftForce = GetTotalLiftForce(atmopshericDensity, forceOfGravity);
+
+                liftForceTable.Add(liftForce);
+
+                altitude += 1000f;
+                currentIteration += 1;
+            }
+
+            return liftForceTable;
+        }
+
         protected void updateCompressorStates(LiftCapacityStates liftCapacityState)
         {
             int count = liftModules.Count;
