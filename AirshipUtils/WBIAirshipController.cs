@@ -58,11 +58,13 @@ namespace WildBlueIndustries
         int partCount = 0;
         bool isLiftingOff = false;
         List<double> atmosphericDensityTable = null;
+#if false
         List<double> liftForceTable = null;
+#endif
         CelestialBody celestialBody = null;
-        #endregion
+#endregion
 
-        #region Overrides
+#region Overrides
         public override void OnStart(StartState state)
         {
             base.OnStart(state);
@@ -91,8 +93,10 @@ namespace WildBlueIndustries
                 airshipControllers = part.vessel.FindPartModulesImplementing<WBIAirshipController>();
                 liftModules = part.vessel.FindPartModulesImplementing<WBIModuleStaticLift>();
 
+#if false
                 // Build our lift force table.
                 buildLiftForceTable(part.vessel.mainBody, part.vessel.mainBody.GeeASL);
+#endif
             }
 
             // Only the first airship controller handles the control logic.
@@ -101,6 +105,7 @@ namespace WildBlueIndustries
 
             // Get max operating altitude
             double maxAltitude = CalculateMaxAltitude(part.vessel.mainBody);
+            
 
             // If we're going up, and we're within 1km of max altitude, then slow our ascent until we reach max altitude.
 
@@ -158,7 +163,8 @@ namespace WildBlueIndustries
 
         #endregion
 
-        #region API
+#region API
+#if false
         public double CalculateMaxAltitude(CelestialBody body)
         {
             // if the body has no atmosphere, then we're not going anywhere
@@ -166,8 +172,15 @@ namespace WildBlueIndustries
                 return 0;
 
             double totalMass = part.vessel.GetTotalMass();
+
             double liftForce = 0;
             double liftAcceleration = 0;
+
+            if (liftForceTable == null)
+            {
+                Debug.Log("WBIAirshipControler.CalculateMaxAltitude, liftForceTable is null");
+                return 0;
+            }
             int count = liftForceTable.Count;
             double maxAltitude = 0;
 
@@ -190,6 +203,7 @@ namespace WildBlueIndustries
 
             return maxAltitude;
         }
+#endif
 
         public double GetTotalLiftForce()
         {
@@ -228,9 +242,9 @@ namespace WildBlueIndustries
                 }
             }
         }
-        #endregion
+#endregion
 
-        #region Events
+#region Events
         [KSPEvent(guiActive = true, guiName = "#LOC_HEISENBERG_increaseStaticLift", groupStartCollapsed = true, groupName = "airshipControl", groupDisplayName = "#LOC_HEISENBERG_airshipGroupDisplayName")]
         public void IncreaseLiftCapacity()
         {
@@ -251,9 +265,9 @@ namespace WildBlueIndustries
             liftCapacityState = LiftCapacityStates.Stopped;
             updateCompressorStates(LiftCapacityStates.Stopped);
         }
-        #endregion
+#endregion
 
-        #region Actions
+#region Actions
         [KSPAction("#LOC_HEISENBERG_increaseStaticLift", actionGroup = KSPActionGroup.None)]
         public void IncreaseLiftAction(KSPActionParam param)
         {
@@ -273,7 +287,8 @@ namespace WildBlueIndustries
         }
         #endregion
 
-        #region Helpers
+#region Helpers
+#if false
         List<double> buildLiftForceTable(CelestialBody body, double forceOfGravity)
         {
             liftForceTable = new List<double>();
@@ -296,6 +311,7 @@ namespace WildBlueIndustries
 
             return liftForceTable;
         }
+#endif
 
         protected void updateCompressorStates(LiftCapacityStates liftCapacityState)
         {
@@ -306,6 +322,6 @@ namespace WildBlueIndustries
                 liftModules[index].liftCapacityState = liftCapacityState;
             }
         }
-        #endregion
+#endregion
     }
 }
