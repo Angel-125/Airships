@@ -19,6 +19,9 @@ If you're looking to cull parts, these folders will make it easier to do.
 
 ---REVISION HISTORY---
 
+2.19.1
+ - Updated HLAirships.cfg patch to remove WBIAirshipController from the HL-10 Command Cab when Hooligan Labs is installed.
+
 2.19.0
 - Removed BARIS dependency dll.
 
