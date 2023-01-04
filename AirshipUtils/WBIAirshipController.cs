@@ -103,9 +103,10 @@ namespace WildBlueIndustries
             if (airshipControllers[0] != this)
                 return;
 
+#if false
             // Get max operating altitude
             double maxAltitude = CalculateMaxAltitude(part.vessel.mainBody);
-            
+#endif   
 
             // If we're going up, and we're within 1km of max altitude, then slow our ascent until we reach max altitude.
 
@@ -161,7 +162,7 @@ namespace WildBlueIndustries
             */
         }
 
-        #endregion
+#endregion
 
 #region API
 #if false
@@ -285,7 +286,7 @@ namespace WildBlueIndustries
         {
             StopCompressors();
         }
-        #endregion
+#endregion
 
 #region Helpers
 #if false
