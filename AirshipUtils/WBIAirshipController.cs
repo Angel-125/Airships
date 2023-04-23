@@ -77,6 +77,8 @@ namespace WildBlueIndustries
             Fields["forceOfGravity"].guiActive = debugMode;
             Fields["atmosphericDensity"].guiActive = debugMode;
             Fields["verticalAcceleration"].guiActive = debugMode;
+
+            buildLiftForceTable(part.vessel.mainBody, part.vessel.mainBody.GeeASL);
         }
 
         public void FixedUpdate()
