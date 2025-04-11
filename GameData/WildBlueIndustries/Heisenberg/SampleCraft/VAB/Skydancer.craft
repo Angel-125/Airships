@@ -1133,7 +1133,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiAtmosphere
 		amount = 0
 		maxAmount = 15
 		flowState = True
@@ -1336,7 +1336,7 @@ PART
 	link = RelayAntenna50_4286029282
 	link = sensorAccelerometer_4285980560
 	link = sensorGravimeter_4285976920
-	link = sensorAtmosphere_4285974768
+	link = sensorname = wbiAtmosphere_4285974768
 	link = sensorBarometer_4285971482
 	attN = top,RelayAntenna50_4286029282
 	attN = front,hl10GyroRing_4288218022
@@ -3806,7 +3806,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiAtmosphere
 		amount = 0
 		maxAmount = 15
 		flowState = True
@@ -30444,7 +30444,7 @@ PART
 }
 PART
 {
-	part = sensorAtmosphere_4285974768
+	part = sensorname = wbiAtmosphere_4285974768
 	partName = Part
 	pos = -8.01116371,49.5790977,-1.21560502
 	attPos = 0,0,0
@@ -40014,7 +40014,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiAtmosphere
 		amount = 3.3999999999999999
 		maxAmount = 3.3999999999999999
 		flowState = True
@@ -40327,7 +40327,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiAtmosphere
 		amount = 3.3999999999999999
 		maxAmount = 3.3999999999999999
 		flowState = True
@@ -40640,7 +40640,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiAtmosphere
 		amount = 3.3999999999999999
 		maxAmount = 3.3999999999999999
 		flowState = True
@@ -40953,7 +40953,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiAtmosphere
 		amount = 3.3999999999999999
 		maxAmount = 3.3999999999999999
 		flowState = True

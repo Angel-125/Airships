@@ -3742,7 +3742,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = wbiAtmosphere
 		amount = 3.3999999999999999
 		maxAmount = 3.3999999999999999
 		flowState = True
@@ -4055,7 +4055,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = wbiAtmosphere
 		amount = 3.3999999999999999
 		maxAmount = 3.3999999999999999
 		flowState = True

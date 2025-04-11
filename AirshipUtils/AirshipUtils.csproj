@@ -91,18 +91,20 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WBIAirshipController.cs" />
     <Compile Include="WBICableDrawer.cs" />
+    <Compile Include="WBIDeployableEngine.cs" />
     <Compile Include="WBIElevator.cs" />
+    <Compile Include="WBIGasTurbine.cs" />
     <Compile Include="WBIModuleStaticLift.cs" />
     <Compile Include="WBISideElevator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\WildBlueTools\WildBlueTools.csproj">
-      <Project>{CC0BDF1A-9641-4628-9F0F-3500DDC99534}</Project>
-      <Name>WildBlueTools</Name>
-    </ProjectReference>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <ProjectReference Include="..\..\WBIResources\Source\WBIResources.csproj">
+      <Project>{9e6c131f-3161-486a-84f3-9f16768b4d4b}</Project>
+      <Name>WBIResources</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

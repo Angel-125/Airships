@@ -5365,7 +5365,7 @@ PART
 	link = SurfaceScanner_4293808024
 	link = sensorBarometer_4293805772
 	link = sensorAccelerometer_4293802064
-	link = sensorAtmosphere_4293800316
+	link = sensorname = wbiname = wbiAtmosphere_4293800316
 	link = sensorThermometer_4293798368
 	link = sensorGravimeter_4293750440
 	sym = trussPiece3x_4293828346
@@ -5423,7 +5423,7 @@ PART
 	link = SurfaceScanner_4293807674
 	link = sensorBarometer_4293805644
 	link = sensorAccelerometer_4293801968
-	link = sensorAtmosphere_4293800166
+	link = sensorname = wbiname = wbiAtmosphere_4293800166
 	link = sensorThermometer_4293797636
 	link = sensorGravimeter_4293750408
 	sym = trussPiece3x_4293835266
@@ -6839,7 +6839,7 @@ PART
 }
 PART
 {
-	part = sensorAtmosphere_4293800316
+	part = sensorname = wbiname = wbiAtmosphere_4293800316
 	partName = Part
 	pos = 16.6983967,21.0643845,-30.0738544
 	attPos = 0,0,0
@@ -6861,7 +6861,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = sensorAtmosphere_4293800166
+	sym = sensorname = wbiname = wbiAtmosphere_4293800166
 	srfN = srfAttach,trussPiece3x_4293835266
 	EVENTS
 	{
@@ -6916,7 +6916,7 @@ PART
 }
 PART
 {
-	part = sensorAtmosphere_4293800166
+	part = sensorname = wbiname = wbiAtmosphere_4293800166
 	partName = Part
 	pos = 19.0400524,21.0643845,-30.0738544
 	attPos = 0,0,0
@@ -6938,7 +6938,7 @@ PART
 	modCost = 0
 	modMass = 0
 	modSize = 0,0,0
-	sym = sensorAtmosphere_4293800316
+	sym = sensorname = wbiname = wbiAtmosphere_4293800316
 	srfN = srfAttach,trussPiece3x_4293828346
 	EVENTS
 	{
@@ -8647,7 +8647,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiname = wbiAtmosphere
 		amount = 0
 		maxAmount = 15
 		flowState = True
@@ -8894,7 +8894,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiname = wbiAtmosphere
 		amount = 0
 		maxAmount = 15
 		flowState = True
@@ -10062,7 +10062,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiname = wbiAtmosphere
 		amount = 3.3999999999999999
 		maxAmount = 3.3999999999999999
 		flowState = True
@@ -12509,7 +12509,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiname = wbiAtmosphere
 		amount = 0
 		maxAmount = 15
 		flowState = True
@@ -12756,7 +12756,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiname = wbiAtmosphere
 		amount = 0
 		maxAmount = 15
 		flowState = True
@@ -13924,7 +13924,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiname = wbiAtmosphere
 		amount = 3.3999999999999999
 		maxAmount = 3.3999999999999999
 		flowState = True
@@ -15134,7 +15134,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiname = wbiAtmosphere
 		amount = 3.3999999999999999
 		maxAmount = 3.3999999999999999
 		flowState = True
@@ -33692,7 +33692,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiname = wbiAtmosphere
 		amount = 0
 		maxAmount = 15
 		flowState = True
@@ -33939,7 +33939,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiname = wbiAtmosphere
 		amount = 0
 		maxAmount = 15
 		flowState = True
@@ -35436,7 +35436,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiname = wbiAtmosphere
 		amount = 0
 		maxAmount = 15
 		flowState = True
@@ -38417,7 +38417,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiname = wbiAtmosphere
 		amount = 0
 		maxAmount = 15
 		flowState = True
@@ -38664,7 +38664,7 @@ PART
 	}
 	RESOURCE
 	{
-		name = Atmosphere
+		name = name = wbiname = wbiAtmosphere
 		amount = 0
 		maxAmount = 15
 		flowState = True
