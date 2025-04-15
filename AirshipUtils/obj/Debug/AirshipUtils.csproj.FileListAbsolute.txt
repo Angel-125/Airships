@@ -14,7 +14,7 @@ C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.T
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.UI.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.UIElementsModule.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.UIModule.dll
-C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.UnityWebRequestWWWModule.dll
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\WBIResources.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.ParticleSystemModule.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\KSPTrackIR.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.UnityWebRequestModule.dll
@@ -30,6 +30,7 @@ C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.V
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.UnityWebRequestTextureModule.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.UnityWebRequestAudioModule.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.UnityWebRequestAssetBundleModule.dll
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.UnityWebRequestWWWModule.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\TDx.TDxInput.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.Physics2DModule.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.SharedInternalsModule.dll
@@ -64,11 +65,10 @@ C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.S
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.WindModule.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.ARModule.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\UnityEngine.InputModule.dll
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\WBIResources.pdb
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\KSPAssets.XmlSerializers.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.csproj.AssemblyReference.cache
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.csproj.CoreCompileInputs.cache
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.csproj.CopyComplete
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.pdb
-C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\WBIResources.dll
-C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\WBIResources.pdb
