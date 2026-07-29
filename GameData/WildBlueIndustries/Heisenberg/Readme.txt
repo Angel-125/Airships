@@ -17,6 +17,10 @@ Wheel: A custom version of the stock TR-2L.
 
 If you're looking to cull parts, these folders will make it easier to do.
 
+Changes
+
+- Updated converter efficiency ratings- experienced kerbals matter!
+
 ---REVISION HISTORY---
 
 2.20.2

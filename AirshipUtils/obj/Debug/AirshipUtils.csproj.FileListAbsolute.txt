@@ -69,6 +69,6 @@ C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\WBIResources.
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\bin\Debug\KSPAssets.XmlSerializers.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.csproj.AssemblyReference.cache
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.csproj.CoreCompileInputs.cache
-C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.csproj.CopyComplete
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.dll
 C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipUtils.pdb
+C:\Projects\KSP\WildBlueIndustries\Airships\AirshipUtils\obj\Debug\AirshipU.3C829B69.Up2Date
